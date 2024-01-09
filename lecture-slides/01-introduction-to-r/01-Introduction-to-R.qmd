@@ -759,7 +759,8 @@ Submit the name of the poem as the answer to the Canvas Quiz question.
   + Due Thursday (1/11) at 8:00am
   
 + **PA 1: Find the Mistakes**
-  + Due Thursday (1/12) at 8:00am \textcolor{red}{Only this time}
+  + Due Thursday (1/12) at 8:00am <span style="color: red;"><strong>Only this time</strong></span>
+
 
 ## Thursday, January 11
 
