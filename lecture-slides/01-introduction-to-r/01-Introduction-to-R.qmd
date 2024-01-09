@@ -18,7 +18,7 @@ Today we will...
   + Intro to R + RStudio
   + Directories & File Paths
 + Troubleshooting
-+ [PA 1: Find the Mistakes](https://earobinson95.github.io/stat331-calpoly/practice-activities/PA1-find-the-mistakes.html)
++ [PA 1: Find the Mistakes](https://gato365.github.io/stat331-calpoly-gato365/practice-activities/PA1-find-the-mistakes.html)
 
 # Introductions
 
@@ -27,7 +27,7 @@ Today we will...
 
 + I am a transplant to the west coast -- MD to NJ to CA.
 
-+ I am in CS/Business way of thinking
++ I am in a CS/Business way of thinking
 
 + Winter Break I went to Morocco & **Salone**
 
@@ -121,13 +121,9 @@ Importantly, **R** is *open-source*.
 + There is no company that owns **R**, like there is for *SAS* or *Matlab*.
   + (*Python* is also open-source!)
 
-
-
 + This means nobody can sell their **R** code!
   + But you can sell "helpers" like **RStudio**.
   + And you can keep code **private** within an organization or company.
-
-
 
 **This means packages are created by users like you and me!**
 
@@ -138,12 +134,9 @@ Being a good open-source citizen means...
 
 ... **sharing** your code publicly when possible (later in this course, we'll learn about *GitHub*!).
 
-
 ... **contributing** to public projects and packages, as you are able.
 
-
 ... creating your own **packages**, if you can.
-
 
 ... using **R** for **ethical and respectful** projects.
 
@@ -192,8 +185,6 @@ knitr::include_graphics("https://srvanderplas.github.io/stat-computing-r-python/
 
 - Your **working directory** is the folder that `R` "thinks" it lives in at the moment.
   - If you save things you have created, they save to your working directory by default.
-
-. . .
 
 ```{r}
 #| echo: true
@@ -768,8 +759,7 @@ Submit the name of the poem as the answer to the Canvas Quiz question.
   + Due Thursday (1/11) at 8:00am
   
 + **PA 1: Find the Mistakes**
-  + Due Thursday (1/12) at 8:00am (Only this time)
-  
+  + Due Thursday (1/12) at 8:00am \textcolor{red}{Only this time}
 
 ## Thursday, January 11
 
@@ -1022,9 +1012,8 @@ https://gato365.github.io/stat331-calpoly-gato365/lab-assignments/Lab1/Lab1-intr
 ## To do...
 
 + **Lab 1: Introduction to Quarto**
-  + Due Friday (4/7) at 11:59pm 
+  + Due Friday (1/15) at 11:59pm 
 + **Read Chapter 2: Importing Data + Basics of Graphics**
-  + **Check-in 2.1 + 2.2** due Tuesday (1/16) at 8:00am
+  + **Check-in 2.1 + 2.2** due Tuesday (1/16) at 2:00pm
   + **PA 2:  Using Data Visualization to Find the Penguins** due Thursday (1/18 at 11:59pm)
-+ **FizzBuzz (up to +5 FP)**
-  + Due Thursday (1/18) at 11:59pm 
+
