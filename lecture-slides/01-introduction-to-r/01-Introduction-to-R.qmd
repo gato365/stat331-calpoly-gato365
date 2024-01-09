@@ -14,7 +14,7 @@ Today we will...
 
 + Welcome to Stat 331/531: Statistical Computing in R
 + Introduction
-  + Intro to Me + You + the course
+  + You + Intro to Me + the course
   + Intro to R + RStudio
   + Directories & File Paths
 + Troubleshooting
@@ -67,7 +67,7 @@ I am looking forward to reading your introductions on Canvas Discussions!
 
 **R**'s **weaknesses** are...
 
-... performing non-analysis programming tasks, like website creation (*python*, *ruby*, ...).
+... performing non-analysis programming tasks, like website creation (*JavaScript*,*Python*, *Ruby on Rails*, ...).
 
 ... hyper-efficient numerical computation (*matlab*, *C*, ...).
 
@@ -101,7 +101,7 @@ install.packages("tibble")
 
 + You should have to install a package **only once**.
 
-. . .
+
 
 To load a package use:
 
@@ -121,13 +121,13 @@ Importantly, **R** is *open-source*.
 + There is no company that owns **R**, like there is for *SAS* or *Matlab*.
   + (*Python* is also open-source!)
 
-. . .
+
 
 + This means nobody can sell their **R** code!
   + But you can sell "helpers" like **RStudio**.
   + And you can keep code **private** within an organization or company.
 
-. . .
+
 
 **This means packages are created by users like you and me!**
 
@@ -138,15 +138,12 @@ Being a good open-source citizen means...
 
 ... **sharing** your code publicly when possible (later in this course, we'll learn about *GitHub*!).
 
-. . .
 
 ... **contributing** to public projects and packages, as you are able.
 
-. . .
 
 ... creating your own **packages**, if you can.
 
-. . .
 
 ... using **R** for **ethical and respectful** projects.
 
@@ -177,13 +174,11 @@ knitr::include_graphics("https://srvanderplas.github.io/stat-computing-r-python/
 
 + In 2014, RStudio hired *Hadley Wickham* as Chief Data Scientist. They now employ around 20 full-time developers.
 
-. . .
 
 + Recall: You can __not__ sell __R__ code, so packages created by RStudio's team are freely available.  
 
   + They make money off the IDE and other helper software.
 
-. . .
 
 + In 2020, RStudio became a PBC (*Public Benefit Corp*), meaning they are legally obligated to support education and open-source development.
 
@@ -218,7 +213,7 @@ getwd()
 
 This file lives in my user files `c:/Users/`...
 
-...on my account `erobin17/` ...
+...on my account `gato365/` ...
 
 ...in my `OneDrive - Cal Poly` folder ...
 
@@ -289,7 +284,7 @@ jump in and start working right away.
   5. Analysis process is well-explained and easy to read.
 
 
-# [Setting up an RStudio Project](https://earobinson95.github.io/stat331-calpoly-text/01-introduction.html#rprojects)
+# [Setting up an RStudio Project](https://gato365.github.io/stat331-calpoly-text/01-introduction.html#rprojects)
 
 
 ## Good practice
