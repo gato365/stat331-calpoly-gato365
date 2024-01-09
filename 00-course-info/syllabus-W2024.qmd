@@ -369,8 +369,8 @@ Your grade in STAT 331/531 will contain the following components:
 | Weekly Journal Quizzes   | 5%     |
 | Check-ins                | 5%     |
 | Practice Activities      | 10%    |
-| Lab Assignments          | 25%    |
 | Midterm Exams            | 20%    |
+| Lab Assignments          | 25%    |
 | Final Project            | 25%    |
 | Final Exam               | 10%    |
 
@@ -412,7 +412,7 @@ your work.
 ## Assignment Breakdown
 
 
-### Weekly Reflection Journal 
+### A. Weekly Reflection Journal 
 
 **Objective**: This journal is designed to enhance your learning experience in statistical computing. By actively documenting your progress, reflecting on challenges, and acknowledging your achievements, you will deepen your understanding and improve your problem-solving skills in R programming.
 
@@ -449,13 +449,13 @@ your work.
 + All responses to Check-ins are due **Sundays at 11:59 pm**.
 
 
-### Check-ins
+### B. Check-ins
 
 Each week, you will find short Check-In questions or tasks throughout the text to make sure you are prepared for class that week. Make sure you submit your answers to these on Canvas to get credit for your efforts. Note that the Canvas Check-in quizzes can be submitted up to three times without a penalty - so you should get 100% on this part of the course!
 
 + All responses to Check-ins are due **Tuesdays at 8:00am**.
 
-### Practice Activities
+### C. Practice Activities
 
 Most Tuesday's, you will be given a Practice Activity to complete, to get the
 hang of the week’s necessary `R` skills. These activities will always result in
@@ -469,7 +469,16 @@ always be given some time in class to work on them.
 
 + Practice Activities are due **Thursdays at 8:00am.**
 
-### Lab Assignments
+
+### D. The Midterms
+
+This course includes two midterms, both of which are cumulative in nature. The purpose of these exams is to assess your understanding of the material covered and your ability to apply R programming skills in various contexts. The first midterm is scheduled for February 1, 2024, and will cover the initial chapters of the course. The second midterm is on February 29, 2024, and will include all content up to that date. These midterms are designed not just to test your knowledge, but also to strengthen your ability to think critically and process code effectively under different circumstances.
+
++ Midterm 1 is on **Thursday 2/1/2024 at 4:10pm**
++ Midterm 2 is on **Thursday 2/29/2024 at 4:10pm**.
+
+
+### E. Lab Assignments
 
 Your typical homework assignments will be weekly labs. You will follow each
 lab's instructions to complete tasks in `R` and submit a rendered .html
@@ -478,6 +487,23 @@ Quarto document to Canvas.
 Most weeks, there will be class time on Thursdays dedicated to working on completing lab assignments.
 
 + Labs are due on **Mondays at 11:59pm**.
+
+
+
+
+### F. The Final Project
+
+The capstone of our course is a final project where you will develop an R Shiny application, choosing from one of the following thematic areas: Spotify, Sports, Census Data, or Finance Data. This project is a culmination of all the concepts and techniques learned throughout the course, presented through a practical lens. Each chapter of the textbook contributes to the skills and knowledge you will apply in this project, making it an integrative and hands-on experience. The aim is not only to solidify your understanding of R but also to showcase your ability to create a real-world application that leverages the powerful features of R Shiny.
+
+
+
+### G. The Final Exam
+
+The final exam, scheduled for March 21, 2024 in this room, will be comprehensive, encompassing all the topics we have covered throughout the course. While the exam is cumulative, it is not weighted as heavily as the final project. This structure is intentional, as the course places a greater emphasis on the practical application of skills and knowledge through the final project. The final exam serves as an opportunity to reinforce and demonstrate your overall understanding of statistical computing with R.
+
++ The final is on **Thursday 3/21/2024 at 7:10pm - 10:00pm**
+
+
 
 
 ## Attendance & Participation

@@ -1,7 +1,7 @@
 ---
 title: "Final Project Details"
 subtitle: "Stat 331/531"
-author: "Dr. Robinson"
+author: "Dr. Williams"
 format: 
   html:
     self-contained: true

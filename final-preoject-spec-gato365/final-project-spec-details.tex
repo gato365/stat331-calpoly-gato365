@@ -1,0 +1,603 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Final Project Specifications},
+  pdfauthor={Dr.~Williams},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Final Project Specifications}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Stat 331/531}
+\author{Dr.~Williams}
+\date{}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, breakable, enhanced, interior hidden, frame hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+
+\hypertarget{final-project-specifications}{%
+\subsubsection{Final Project
+Specifications}\label{final-project-specifications}}
+
+\hypertarget{overview}{%
+\paragraph{\texorpdfstring{\textbf{Overview}}{Overview}}\label{overview}}
+
+The final project for this course involves creating an R Shiny
+application that analyzes data from one of four broad areas of
+application: Spotify, Sports, Census Data, or Finance Data. This project
+is designed to integrate concepts from each chapter of the textbook and
+demonstrate practical applications using R. In your final project,
+you'll also have the ability to incorporate ChatGPT, using it to make
+your code, tables and visualizations within your R Shiny application
+more presentable. This AI integration will add a cutting-edge dimension
+to your project. Beyond this, the project will demonstrate your acquired
+skills in R programming and data analysis, showcasing your ability to
+apply classroom concepts to practical, real-world data scenarios.
+
+\hypertarget{group-organization-and-selection-process}{%
+\paragraph{\texorpdfstring{\textbf{Group Organization and Selection
+Process}}{Group Organization and Selection Process}}\label{group-organization-and-selection-process}}
+
+\begin{itemize}
+\item
+  \textbf{Total Number of Groups}: The class will be divided into 12
+  groups, with each group consisting of exactly 3 members. This ensures
+  a balanced team size for effective collaboration.
+\item
+  \textbf{Distribution Across Areas}: There will be three groups
+  dedicated to each of the project areas. This structure allows for a
+  focused exploration of each area while maintaining diversity in
+  project topics.
+\item
+  \textbf{Group Formation}: Groups are self-selected based on mutual
+  interest in a specific project area. This approach encourages students
+  to collaborate with peers who share similar interests, fostering a
+  more engaged learning environment.
+\item
+  \textbf{Fixed Group Membership}: Once formed, group membership is
+  final. This policy is in place to encourage students to learn to work
+  effectively with diverse personalities and perspectives, mirroring
+  real-world team dynamics.
+\item
+  \textbf{Project Area Selection Process}:
+\end{itemize}
+
+The selection of project areas for the final project is an important
+step in forming your groups and defining the focus of your work. To
+ensure a fair and organized process, we will follow these steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Area Preference Survey (Week 2)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    At the beginning of Week 2, all students will be required to
+    complete a survey indicating their top two or three preferences for
+    project areas, which include Spotify, Sports, Census Data, and
+    Finance Data.
+  \item
+    The survey will also allow students to list one or two preferred
+    teammates, if they have already formed a partial group.
+  \item
+    An additional question will ask students to prioritize between the
+    project area or team formation, assisting in aligning student
+    interests with available options.
+  \end{itemize}
+\item
+  \textbf{Team and Area Assignment (End of Week 2)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Based on the survey responses, I will assign teams the project areas
+    with the aim of ensuring that every student receives either their
+    first or second choice.
+  \item
+    This approach will also support the formation of teams for students
+    who are not yet part of a group, guaranteeing that everyone is
+    included.
+  \end{itemize}
+\item
+  \textbf{Confirmation and Initial Meeting}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Following the assignment, students will be notified of their group
+    and project area.
+  \item
+    Each group is then required to meet with me to discuss their project
+    selection and initial ideas. This meeting should be scheduled by the
+    end of Week 2.
+  \end{itemize}
+\end{enumerate}
+
+This structured selection process, conducted during Week 2, ensures that
+all students have an equal opportunity to work in their area of interest
+and facilitates the formation of balanced teams. It is designed to cater
+to both students with predetermined group preferences and those looking
+for a group, ensuring a smooth start to the project phase of the course.
+
+\hypertarget{week-project-timeline-with-detailed-tasks}{%
+\subsubsection{10-Week Project Timeline with Detailed
+Tasks}\label{week-project-timeline-with-detailed-tasks}}
+
+\hypertarget{week-1-ice-breaker-and-team-formation}{%
+\paragraph{Week 1: Ice Breaker and Team
+Formation}\label{week-1-ice-breaker-and-team-formation}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Task}: Conduct engaging activities to facilitate interaction.
+\end{itemize}
+
+\hypertarget{week-2-group-formation-and-area-selection}{%
+\paragraph{Week 2: Group Formation and Area
+Selection}\label{week-2-group-formation-and-area-selection}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Task: Formation of Research Teams and Area Selection}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Objective}: Assemble a team of three and choose a specific
+    research area to delve into. Given the limited availability of spots
+    per area, it's important to act swiftly in forming your group and
+    making your selection. \textbf{Action Required}: Collaboratively
+    decide on a project area that resonates with your group's interests
+    and skills.
+  \end{itemize}
+\item
+  \textbf{Submission Process: Preliminary Approval and Official
+  Registration}
+
+  \begin{itemize}
+  \item
+    \textbf{Official Registration}: Complete
+    \href{https://forms.gle/FE64581hRqh8ppAMA}{Check-In 1} with your
+    team details. Only one person has to complete this. This includes:
+  \item
+    \textbf{Team Members}: List all three group members.
+  \item
+    \textbf{Group Name}: Choose a creative name for your team.
+  \item
+    \textbf{Project Area}: Specify the area you plan to investigate.
+    {[}Spotify, Sports, Census Data, or Finance Data{]}
+  \item
+    \textbf{Justification}: Briefly explain why you've chosen this
+    particular area and what you hope to explore or achieve.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{week-3-project-proposal-development}{%
+\paragraph{Week 3: Project Proposal
+Development}\label{week-3-project-proposal-development}}
+
+\begin{itemize}
+\item
+  \textbf{You will be given your project area}
+\item
+  \textbf{Task}: Start crafting project proposals, focusing on
+  objectives and data sources.
+\item
+  \textbf{Checkpoints}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Assess whether project ideas align with course objectives. In other
+    words, does the project cover one element from each chapter of the
+    textbook? This hard to tell at this point but consult with me
+    informally to make sure you are on the right track.
+  \item
+    You will most likely change your minds during week 6 and 7 but that
+    is ok. This is just a starting point.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{week-4-proposal-submission}{%
+\paragraph{Week 4: Proposal
+Submission}\label{week-4-proposal-submission}}
+
+\begin{itemize}
+\item
+  \textbf{Task}: Submit project proposal detailing concept and data
+  plans.
+\item
+  \textbf{Submission}: Complete
+  \href{https://forms.gle/xiJNcRqwnwLD36qh8}{Check-In 2} with your team
+  details. Only one person has to complete this. This includes:
+\item
+  Team Members
+\item
+  Group Name
+\item
+  Selected Area: {[} Spotify, Sports, Census Data, or Finance Data{]}
+\item
+  Potential Title of Your Project
+\item
+  What do you all hope to explore with this data? Why?
+\end{itemize}
+
+\hypertarget{week-5-data-acquisition-and-initial-development}{%
+\paragraph{Week 5: Data Acquisition and Initial
+Development}\label{week-5-data-acquisition-and-initial-development}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Task}: Gain access to data and start developing initial code.
+\item
+  \textbf{Checkpoints}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Ensure data is relevant and properly sourced.
+  \item
+    Check initial code for logical flow and functionality.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{week-6-exploratory-data-analysis-and-discovery}{%
+\paragraph{Week 6: Exploratory Data Analysis and
+Discovery}\label{week-6-exploratory-data-analysis-and-discovery}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Task}: Engage in exploratory data analysis to discover
+  potential insights and directions. Students should:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Experiment with Data}: Delve into the dataset to uncover
+    interesting patterns, trends, or anomalies. This can involve
+    statistical analysis, hypothesis testing, or trying out different
+    data transformations.
+  \item
+    \textbf{Showcase Discoveries}: Present findings in an informal
+    setting, highlighting any surprising insights or potential areas of
+    further exploration.
+  \item
+    \textbf{Open Exploration}: Encourage creativity in exploring the
+    data. This is the stage for brainstorming and playing around with
+    different ideas without being committed to a final project
+    direction.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{week-7-refining-focus-for-r-shiny-application-and-data-preparation}{%
+\paragraph{Week 7: Refining Focus for R Shiny Application and Data
+Preparation}\label{week-7-refining-focus-for-r-shiny-application-and-data-preparation}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Task}: This week, students will refine the focus of their R
+  Shiny application using insights from their exploratory data analysis
+  and start preparing their data for the application.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Determine Application Focus}: Based on the exploratory
+    analysis conducted in Week 6, decide on the specific aspect or
+    question your R Shiny app will explore. This decision should
+    leverage the data's potential to engage and inform users, focusing
+    on a clear and achievable objective.
+  \item
+    \textbf{Data Preparation}: Once a direction has been selected,
+    students are required to save their data from the API they are using
+    as an RDA (R Data) file. This step ensures that the data is readily
+    available in a format that can be efficiently used within the R
+    environment, facilitating smoother development and deployment of the
+    application.
+  \item
+    \textbf{Initial Visualization Concepts}: Begin brainstorming and
+    sketching initial ideas for data visualization within the app. Focus
+    on creating interactive, user-friendly, and informative
+    visualizations that effectively communicate the data's story.
+  \item
+    \textbf{Flexibility to Pivot}: Remember, you have the option to
+    adjust or change your project focus if a more compelling or feasible
+    direction emerges from your data exploration. This flexibility is
+    available until the end of Week 8, allowing for adaptive and
+    responsive project development.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{week-8-enhance-app-aesthetics-and-functionality}{%
+\paragraph{Week 8: Enhance App Aesthetics and
+Functionality}\label{week-8-enhance-app-aesthetics-and-functionality}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Task}: Create app's UI/UX outline and develop script the video
+  demonstration.
+\item
+  \textbf{Checkpoints}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Assess the aesthetic appeal and user experience of the app.
+  \item
+    Review the script for clarity and comprehensiveness.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{week-9-finalize-app-and-draft-report}{%
+\paragraph{Week 9: Finalize App and Draft
+Report}\label{week-9-finalize-app-and-draft-report}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Task}: Complete app development and start the report draft.
+\end{itemize}
+
+\hypertarget{week-10-project-submission}{%
+\paragraph{Week 10: Project
+Submission}\label{week-10-project-submission}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Task}: Discuss final version of the R Shiny app, video, and
+  report with me
+\item
+  \textbf{Project Due March 19th at 11:59 PM during final exam week}
+\end{itemize}
+
+\hypertarget{examples-for-scenarios}{%
+\paragraph{\texorpdfstring{\textbf{Examples for
+Scenarios}}{Examples for Scenarios}}\label{examples-for-scenarios}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Spotify App - Artist Rivalry Analysis}: Create an app that
+  delves into the listening patterns related to recent music artist
+  rivalries, like Billie Eilish vs.~Olivia Rodrigo. Analyze their
+  streams, listener demographics, and popular playlists to understand
+  fan engagement and preference trends.
+\item
+  \textbf{Sports Analytics App - NFL Rivalries}: Develop an application
+  that focuses on key NFL rivalries, such as the San Francisco 49ers
+  vs.~the Seattle Seahawks. Provide detailed statistics on team
+  performance, player statistics, and historical matchup outcomes to
+  offer insights for sports analysts and fans.
+\item
+  \textbf{Census Data Explorer - Urban Demographics Comparison}: Craft
+  an interactive tool that visualizes and compares demographic data
+  between major cities like San Francisco and Los Angeles. Analyze
+  aspects like race demographics, age distribution, and population
+  growth trends, drawing from recent census reports.
+\item
+  \textbf{Financial Trends Analyzer - Tech Industry Focus}: Build an app
+  that tracks and predicts stock market trends, with a specific focus on
+  the technology sector. Analyze stock performance, market news, and
+  financial indicators to provide insights for investors and financial
+  analysts.
+\end{enumerate}
+
+\hypertarget{project-requirements}{%
+\paragraph{\texorpdfstring{\textbf{Project
+Requirements}}{Project Requirements}}\label{project-requirements}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Content Coverage}: The project must cover one element from
+  each chapter of the textbook.
+\item
+  \textbf{R Shiny Application}: Students must use R Shiny, enabling
+  users to interact with the data and insights provided by the app.
+\item
+  \textbf{Develop a Scenario}: Each group must develop a scenario or use
+  case for their app regarding a project area, detailing what the app
+  allows users to do, learn, or explore.
+\item
+  \textbf{Video Demonstration}: Create a 3-5 minute video demonstrating
+  how the app is used and what users can gain from it.
+\item
+  \textbf{Report Submission}: Submit a 1-2 page report explaining the
+  purpose of the app, its importance, a brief explanation of the code,
+  and the role of ChatGPT in the project development.
+\end{enumerate}
+
+\hypertarget{final-project-deliverables}{%
+\paragraph{Final Project
+Deliverables}\label{final-project-deliverables}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{R Shiny Application}
+\item
+  \textbf{3-5 minute Video Demonstration}
+\item
+  \textbf{1-2 page Report Submission}
+\item
+  \textbf{Project Due March 19th at 11:59 PM}
+\end{itemize}
+
+\hypertarget{evaluation-criteria}{%
+\paragraph{\texorpdfstring{\textbf{Evaluation
+Criteria}}{Evaluation Criteria}}\label{evaluation-criteria}}
+
+\begin{itemize}
+\tightlist
+\item
+  Adherence to project requirements and timeline.
+\item
+  Creativity and practicality of the R Shiny application.
+\item
+  Quality of the video demonstration and report.
+\item
+  Effective use of R and integration of textbook concepts.
+\end{itemize}
+
+
+
+\end{document}

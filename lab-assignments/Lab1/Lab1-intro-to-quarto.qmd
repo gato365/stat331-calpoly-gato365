@@ -62,7 +62,7 @@ To start, your YAML should look something like this:
 #| echo: true
 ---
 title: "Lab 1: Introduction to Quarto"
-author: "Dr. Robinson"
+author: "Dr. Williams"
 format: html
 embed-resources: true
 code-tools: true

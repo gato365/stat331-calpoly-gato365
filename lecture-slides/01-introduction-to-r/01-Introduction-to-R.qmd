@@ -23,26 +23,14 @@ Today we will...
 # Introductions
 
 
-## `r fontawesome::fa("hand")` Hi, I'm Dr. Robinson!
+## `r fontawesome::fa("hand")` Hi, I'm Dr. Williams!
 
-+ I am a transplant to the west coast -- MN to NE to CA.
++ I am a transplant to the west coast -- MD to NJ to CA.
 
-+ My favorite things are playing pickleball, reading, and FaceTiming my 3 year-old nephew.
++ I am in CS/Business way of thinking
 
-## Our Classroom Learning Assistant!
++ Winter Break I went to Morocco & Salone 
 
-We will be joined in class by Brandon.
-
-Brandon is...
-
-+ A fourth-year Statistics major.
-
-+ Originally from San Jose in the Bay Area.
-
-+ xxxx
-
-
-## You!
 
 I am looking forward to reading your introductions on Canvas Discussions!
 

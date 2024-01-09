@@ -15,7 +15,7 @@ execute:
 
 #### **Overview**
 
-The final project for this course involves creating an R Shiny application that draws on one of four specified areas: Spotify, Sports, Census Data, or Finance Data. This project is designed to integrate concepts from each chapter of the textbook and demonstrate practical applications using R.
+The final project for this course involves creating an R Shiny application that analyzes data from one of four broad areas of application: Spotify, Sports, Census Data, or Finance Data. This project is designed to integrate concepts from each chapter of the textbook and demonstrate practical applications using R. In your final project, you'll also have the ability to incorporate ChatGPT, using it to make your code, tables and visualizations within your R Shiny application more presentable. This AI integration will add a cutting-edge dimension to your project. Beyond this, the project will demonstrate your acquired skills in R programming and data analysis, showcasing your ability to apply classroom concepts to practical, real-world data scenarios.
 
 #### **Group Organization and Selection Process**
 
@@ -27,10 +27,27 @@ The final project for this course involves creating an R Shiny application that 
 
 -   **Fixed Group Membership**: Once formed, group membership is final. This policy is in place to encourage students to learn to work effectively with diverse personalities and perspectives, mirroring real-world team dynamics.
 
--   **Project Area Selection**:
+-   **Project Area Selection Process**:
 
-    -   **Initial Meeting Requirement**: After forming your group, you are required to meet with me either during learning hours or after class. This meeting is crucial for discussing your project selection. This should be done by week 2.
-    -   **Area Availability Confirmation**: During our meeting, I will confirm the availability of your chosen project area. It's important to have a second choice in mind, as spots in each area are limited and assigned on a first-come, first-served basis.
+The selection of project areas for the final project is an important step in forming your groups and defining the focus of your work. To ensure a fair and organized process, we will follow these steps:
+
+
+1. **Area Preference Survey (Week 2)**:
+   - At the beginning of Week 2, all students will be required to complete a survey indicating their top two or three preferences for project areas, which include Spotify, Sports, Census Data, and Finance Data.
+   - The survey will also allow students to list one or two preferred teammates, if they have already formed a partial group.
+   - An additional question will ask students to prioritize between the project area or team formation, assisting in aligning student interests with available options.
+
+2. **Team and Area Assignment (End of Week 2)**:
+   - Based on the survey responses, I will assign teams the project areas with the aim of ensuring that every student receives either their first or second choice.
+   - This approach will also support the formation of teams for students who are not yet part of a group, guaranteeing that everyone is included.
+
+3. **Confirmation and Initial Meeting**:
+   - Following the assignment, students will be notified of their group and project area.
+   - Each group is then required to meet with me to discuss their project selection and initial ideas. This meeting should be scheduled by the end of Week 2.
+
+This structured selection process, conducted during Week 2, ensures that all students have an equal opportunity to work in their area of interest and facilitates the formation of balanced teams. It is designed to cater to both students with predetermined group preferences and those looking for a group, ensuring a smooth start to the project phase of the course.
+
+
 
 ### 10-Week Project Timeline with Detailed Tasks
 
@@ -43,30 +60,33 @@ The final project for this course involves creating an R Shiny application that 
 -   **Task: Formation of Research Teams and Area Selection**
     -   **Objective**: Assemble a team of three and choose a specific research area to delve into. Given the limited availability of spots per area, it's important to act swiftly in forming your group and making your selection. **Action Required**: Collaboratively decide on a project area that resonates with your group's interests and skills.
 -   **Submission Process: Preliminary Approval and Official Registration**
-    -   **Initial Approval**: Before you officially register your team, you'll need to get my approval for your group composition and chosen area. This ensures a balanced distribution of groups across different areas and aligns with course objectives.
-    -   **Official Registration**: Once approved, complete Google Form 1 with your team details. This includes:
-    -   **Team Members**: List all three group members.
-    -   **Group Name**: Choose a creative name for your team.
-    -   **Project Area**: Specify the area you plan to investigate. \[Dropdown menu with options like Spotify, Sports, Census Data, Finance Data\]
-    -   **Justification**: Briefly explain why you've chosen this particular area and what you hope to explore or achieve.
-    -   **Final Submission**: Submit the form only after receiving my approval, as this will be your formal commitment to the selected area and team structure for the project.
+    -   **Official Registration**: Complete [Check-In 1](https://forms.gle/FE64581hRqh8ppAMA) with your team details. Only one person has to complete this. This includes:
+    
+      -   **Team Members**: List all three group members.
+      -   **Group Name**: Choose a creative name for your team.
+      -   **Project Area**: Specify the area you plan to investigate. \[Spotify, Sports, Census Data, or Finance Data\]
+      -   **Justification**: Briefly explain why you've chosen this particular area and what you hope to explore or achieve.
+
 
 #### Week 3: Project Proposal Development
 
+- **You will be given your project area**
 -   **Task**: Start crafting project proposals, focusing on objectives and data sources.
 -   **Checkpoints**:
+
     -   Assess whether project ideas align with course objectives. In other words, does the project cover one element from each chapter of the textbook? This hard to tell at this point but consult with me informally to make sure you are on the right track.
     -   You will most likely change your minds during week 6 and 7 but that is ok. This is just a starting point.
 
 #### Week 4: Proposal Submission
 
 -   **Task**: Submit project proposal detailing concept and data plans.
--   **Submission**: Google Form 2
-    -   Group Name: \[Text field\]
-    -   Team Members: \[Text field for names\]
-    -   Selected Area: \[Dropdown menu with options like Spotify, Sports, Census Data, Finance Data\]
-    -   Potential Title of Your Project: \[Text field\]
-    -   Brief Description of Proposal: \[Paragraph text field\]
+-   **Submission**: Complete [Check-In 2](https://forms.gle/xiJNcRqwnwLD36qh8) with your team details. Only one person has to complete this. This includes:
+
+  -   Team Members
+  -   Group Name
+  -   Selected Area: \[ Spotify, Sports, Census Data, or Finance Data\]
+  -   Potential Title of Your Project
+  - What do you all hope to explore with this data? Why?
 
 #### Week 5: Data Acquisition and Initial Development
 
@@ -103,26 +123,37 @@ The final project for this course involves creating an R Shiny application that 
 
 #### Week 10: Project Submission
 
--   **Task**: Submit the final version of the R Shiny app, video, and report.
--   **Final Evaluation**:
-    -   Thoroughly test the app for functionality and user experience.
-    -   Assess the video for effective communication and demonstration of the app.
-    -   Evaluate the report for depth of analysis, technical accuracy, and reflection on the learning process.
+-   **Task**: Discuss final version of the R Shiny app, video, and report with me
+- **Project Due March 19th at 11:59 PM during final exam week**
+
+#### **Examples for Scenarios**
+
+1. **Spotify App - Artist Rivalry Analysis**: Create an app that delves into the listening patterns related to recent music artist rivalries, like Billie Eilish vs. Olivia Rodrigo. Analyze their streams, listener demographics, and popular playlists to understand fan engagement and preference trends.
+
+2. **Sports Analytics App - NFL Rivalries**: Develop an application that focuses on key NFL rivalries, such as the San Francisco 49ers vs. the Seattle Seahawks. Provide detailed statistics on team performance, player statistics, and historical matchup outcomes to offer insights for sports analysts and fans.
+
+3. **Census Data Explorer - Urban Demographics Comparison**: Craft an interactive tool that visualizes and compares demographic data between major cities like San Francisco and Los Angeles. Analyze aspects like race demographics, age distribution, and population growth trends, drawing from recent census reports.
+
+4. **Financial Trends Analyzer - Tech Industry Focus**: Build an app that tracks and predicts stock market trends, with a specific focus on the technology sector. Analyze stock performance, market news, and financial indicators to provide insights for investors and financial analysts.
+
+
 
 #### **Project Requirements**
 
 1.  **Content Coverage**: The project must cover one element from each chapter of the textbook.
 2.  **R Shiny Application**: Students must use R Shiny, enabling users to interact with the data and insights provided by the app.
-3.  **Develop a Scenario**: Each group must develop a scenario or use case for their app, detailing what the app allows users to do, learn, or explore.
-4.  **Video Demonstration**: Create a video demonstrating how the app is used and what users can gain from it.
+3.  **Develop a Scenario**: Each group must develop a scenario or use case for their app regarding a project area, detailing what the app allows users to do, learn, or explore.
+4.  **Video Demonstration**: Create a 3-5 minute video demonstrating how the app is used and what users can gain from it.
 5.  **Report Submission**: Submit a 1-2 page report explaining the purpose of the app, its importance, a brief explanation of the code, and the role of ChatGPT in the project development.
 
-#### **Examples for Scenarios**
 
-1.  **Spotify App**: An app that analyzes user listening habits and recommends new songs or playlists.
-2.  **Sports Analytics App**: An application that provides detailed statistics and performance analysis of sports teams or players.
-3.  **Census Data Explorer**: An interactive tool for visualizing and interpreting demographic data from census reports.
-4.  **Financial Trends Analyzer**: An app that tracks and predicts stock market trends or personal finance management.
+#### Final Project Deliverables
+
+- **R Shiny Application**
+- **3-5 minute Video Demonstration**
+- **1-2 page Report Submission**
+- **Project Due March 19th at 11:59 PM**
+
 
 #### **Evaluation Criteria**
 
@@ -131,4 +162,4 @@ The final project for this course involves creating an R Shiny application that 
 -   Quality of the video demonstration and report.
 -   Effective use of R and integration of textbook concepts.
 
-T
+
