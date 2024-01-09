@@ -290,7 +290,7 @@ jump in and start working right away.
 ## Good practice
 
 - Organize your folders carefully, and name them meaningfully:
-  * `C:/User/erobin17/Stat331/lab1/` rather than `Desktop/stuff/`
+  * `C:/User/gato365/Stat331/lab1/` rather than `Desktop/stuff/`
     
 - Use **R Projects** liberally - put one in the "main" folder for each project
 
@@ -745,7 +745,7 @@ matrix(c("a", "b", "c", "d"), num_row = 2)
 
 **Hint:** Look up the help documentation -- `help(matrix)`
 
-## [PA 1: Find the Mistakes](https://earobinson95.github.io/stat331-calpoly/practice-activities/PA1-find-the-mistakes.html)
+## [PA 1: Find the Mistakes](https://gato365.github.io/stat331-calpoly-gato365/practice-activities/PA1-find-the-mistakes.html)
 
 The components of the Practice Activity are described below:
 
@@ -768,10 +768,8 @@ Submit the name of the poem as the answer to the Canvas Quiz question.
   + Due Thursday (1/11) at 8:00am
   
 + **PA 1: Find the Mistakes**
-  + Due Thursday (1/11) at 8:00am
+  + Due Thursday (1/12) at 8:00am (Only this time)
   
-+ **Bonus Challenge 0: FizzBuzz (up to +5 FP)**
-  + Due Thursday (4/18) at 11:59pm 
 
 ## Thursday, January 11
 
@@ -1003,7 +1001,7 @@ knitr::include_graphics("images/horst_qmd_render_schema.png")
 ## Rendering your Quarto Document
 
 When you click **Render**:
-
+ 
 -   Your file is saved.
 -   The R code written in your *.qmd* file gets run **in order**.
     -   It starts from scratch, even if you previously ran some of the code.
@@ -1012,7 +1010,9 @@ When you click **Render**:
     -   This will be saved in the same folder as "Lab1.qmd".
 
 
-## [Lab 1: Introduction to Quarto](https://zoerehnberg.github.io/STAT331-S23/lab_assignments/lab1/LA1_intro_quarto.html)
+## [Lab 1: Introduction to Quarto](https://gato365.github.io/stat331-calpoly-gato365/lab-assignments/Lab1/Lab1-intro-to-quarto.html)
+
+https://gato365.github.io/stat331-calpoly-gato365/lab-assignments/Lab1/Lab1-intro-to-quarto.html
 
 ## `r fontawesome::fa("warning")` NOTE
 
