@@ -15,6 +15,9 @@ Today we will...
 + Welcome to Stat 331/531: Statistical Computing in R
 + Introduction
   + You + Intro to Me + the course
+  + Ice Breaker (two truths and 1 lie)
+  + Syllabus
+    + Contracts
   + Intro to R + RStudio
   + Directories & File Paths
 + Troubleshooting
