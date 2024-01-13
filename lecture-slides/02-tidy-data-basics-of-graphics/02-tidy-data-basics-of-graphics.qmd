@@ -13,16 +13,15 @@ self-contained: true
 library(tidyverse)
 ```
 
-## Tuesday, January 17th
+## Thursday, January 18th
 
 Today we will...
 
--   Review PA 1: Find the Mistake
 -   Mini lecture on text material
     -   Tidy Data
     -   Load External Data
     -   Graphics (and ggplot2)
--   [PA 2: Using Data Visualization to Find the Penguins](https://earobinson95.github.io/stat331-calpoly/practice-activities/PA2-ggplot-palmer-penguins.html)
+-   [PA 2: Using Data Visualization to Find the Penguins](https://gato365.github.io/stat331-calpoly-gato365/practice-activities/PA2-ggplot-palmer-penguins.html)
 
 # Tidy Data
 
@@ -107,6 +106,31 @@ The tidyverse has some cleaned-up versions in the `readr` and `readxl` packages:
 
 -   `read_excel()` is specifically for dealing with Excel files
 
+## APIs in Statistical Computing
+
+### Utilizing APIs for Data Access
+
+APIs provide structured, real-time data access, allowing custom queries and often requiring authentication. They are essential in modern data science for accessing updated and specific data sets.
+
+### A REST API
+
+![](images/rest_api_works.png){fig-align="center" width="588"}
+
+:::
+
+## Examples of APIs
+
+-   *Spotify API*
+    -   Analyze music trends and user habits with the `spotifyr` package, directly interfacing with Spotify's Web API.
+-   *Finance Data API*
+    -   Access historical stock prices and financial statements using the `tidyquant` package, integrating with financial markets data.
+-   *Census Data API*
+    -   Retrieve demographics and population statistics with the `tidycensus` package, simplifying the use of US Census Bureau data.
+-   *Sports Data API*
+    -   Collect sports statistics and performance metrics. For example, use custom-built APIs or data access tools for platforms like Sports Reference.
+
+:::
+
 # Grammar of Graphics
 
 ## Grammar of Graphics: graphic forms from the ground up
@@ -132,25 +156,6 @@ It's not just a neat party trick!
 "\[The grammar\] makes it easier for you to iteratively update a plot, changing a single feature at a time. The grammar is also useful because it suggests the high-level aspects of a plot that *can* be changed, giving you a framework to think about graphics, and hopefully shortening the distance from mind to paper. It also encourages the use of graphics customised to a particular problem, rather than relying on generic named graphics.
 :::
 
-## APIs in Statistical Computing
-
-### Utilizing APIs for Data Access
-
-APIs provide structured, real-time data access, allowing custom queries and often requiring authentication. They are essential in modern data science for accessing updated and specific data sets.
-
-**Examples of APIs**
-
--   *Spotify API*
-    -   Analyze music trends and user habits with the `spotifyr` package, directly interfacing with Spotify's Web API.
--   *Finance Data API*
-    -   Access historical stock prices and financial statements using the `tidyquant` package, integrating with financial markets data.
--   *Census Data API*
-    -   Retrieve demographics and population statistics with the `tidycensus` package, simplifying the use of US Census Bureau data.
--   *Sports Data API*
-    -   Collect sports statistics and performance metrics. For example, use custom-built APIs or data access tools for platforms like Sports Reference.
-
-:::
-
 ## Grammar of Graphics: components
 
 GoG components, as specified in R's `ggplot2`
@@ -169,7 +174,7 @@ Of course, we can also control axes, legends, titles ... (`guides`)
 
 ## How to build a graph
 
-![](https://unl-statistics.github.io/R-workshops/02-r-graphics/knitr/images/ggplot2-notation.png)
+![](images/ggplot_process.png){fig-align="center" width="588"}
 
 ## How to build a graph
 
@@ -396,7 +401,7 @@ Once our data is formatted and we know what type of variables we are working wit
 
 A stat builds a new variable to plot (e.g., count and proportion)
 
-![](https://unl-statistics.github.io/R-workshops/02-r-graphics/knitr/images/stat1.png)
+![](images/layers.png){fig-align="center" width="400"}
 
 ## Faceting
 
@@ -460,7 +465,7 @@ ggplot(mpg, aes(fl, fill = drv)) +
   geom_bar(position = "")`
 ```
 
-![](https://unl-statistics.github.io/R-workshops/02-r-graphics/knitr/3-Layers_files/figure-html/unnamed-chunk-8-1.png)
+![](images/position_adjustments.png){fig-align="center" width="100"}
 
 ## Plot Customizations
 
@@ -666,10 +671,7 @@ What sorts of relationships are inferred, and under what circumstances?
 ::: panel-tabset
 ### Graphic
 
-```{r}
-#| fig-align: center
-knitr::include_graphics("https://unl-statistics.github.io/R-workshops/02-r-graphics/knitr/images/gestalt3.jpg")
-```
+![](images/gestalt_principles.jpg){fig-align="center" width="500"}
 
 ### Features
 
@@ -763,8 +765,9 @@ knitr::include_graphics("https://unl-statistics.github.io/R-workshops/02-r-graph
     -   double encoding - where you use color, use another aesthetic (line type, shape)
     -   If you can print your chart out in black and white and still read it, it will be safe for colorblind users. This is the only foolproof way to do it!
     -   If you are using a color gradient, use a monochromatic color scheme where possible.
-    -   If you have a bidirectional scale (e.g. showing positive and negative values), the safest scheme to use is purple - white - orange. In any color scale that is multi-hue, it is important to transition through white, instead of from one color to another directly.
--   Be conscious of what certain colors “mean”
+    -   \small{If you have a bidirectional scale (e.g. showing positive and negative values), the safest scheme to use is purple - white - orange. In any color scale that is multi-hue, it is important to transition through white, instead of from one color to another directly.}
+-   \small{Be conscious of what certain colors “mean”}
+
 
 ## Gradients
 
@@ -773,17 +776,11 @@ knitr::include_graphics("https://unl-statistics.github.io/R-workshops/02-r-graph
 
 No more than 7 colors
 
-```{r}
-#| fig-align: center
-knitr::include_graphics("https://unl-statistics.github.io/R-workshops/02-r-graphics/knitr/4-Perception_files/figure-html/unnamed-chunk-8-1.png")
-```
+![](images/seven_colors.png){fig-align="center" width="588"}
 
 Can use `colorRampPalette()` from the `RColorBrewer` package to produce larger palettes by interpolating existing ones
 
-```{r}
-#| fig-align: center
-knitr::include_graphics("https://unl-statistics.github.io/R-workshops/02-r-graphics/knitr/4-Perception_files/figure-html/unnamed-chunk-9-1.png")
-```
+![](images/more_colors.png){fig-align="center" width="588"}
 
 ### Quantitative schemes
 
@@ -819,15 +816,13 @@ You can also take a look at other [ways to find nice color palettes](https://lis
 
 ## Week 2 Assignments
 
-[Lab 2: Exploring Rodents with ggplot2](https://earobinson95.github.io/stat331-calpoly/lab-assignments/Lab2-graphics/lab2-exploring-rodents-with-ggplot2.html)
+[Lab 2: Exploring Rodents with ggplot2](https://gato365.github.io/stat331-calpoly-gato365/lab-assignments/Lab2-graphics/lab2-exploring-rodents-with-ggplot2.html)
 
-[Challenge 2: Spicing things up with ggplot2](https://earobinson95.github.io/stat331-calpoly/lab-assignments/Lab2-graphics/challenge2-spicing-things-up-with-ggplot2.html)
+
 
 ## To do...
 
 -   **Lab 2: Exploring Rodents with ggplot2**
     -   due Friday, 1/20 at 11:59pm
--   **Challenge 2: Spicing things up with ggplot2**
-    -   due Saturday, 1/21 at 11:59pm
 -   **Read Chapter 3: Data Cleaning and Manipulation**
     -   **Concept Check 3.1 + 3.2** due Monday (1/23) at 8am
