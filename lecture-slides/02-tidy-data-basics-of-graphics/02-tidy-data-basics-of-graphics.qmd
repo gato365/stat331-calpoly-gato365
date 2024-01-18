@@ -18,6 +18,7 @@ library(tidyverse)
 Today we will...
 
 -   Mini lecture on text material
+    -   Strike Update
     -   Tidy Data
     -   Load External Data
     -   Graphics (and ggplot2)
@@ -89,7 +90,13 @@ Joe, 40
 
 ::: {.column width="50%"}
 `.txt`: Plain text - Could be just text - Could be comma-separated data - Could be tab-separated, bar-separated, etc. - Need to let R know what to look for
+ 
+ 
+**Let's Look at `Age_Data` directory from this week's Check-In for a better understanding of these file types.**
+
 :::
+
+
 :::
 
 ## Loading External Data
@@ -105,6 +112,16 @@ The tidyverse has some cleaned-up versions in the `readr` and `readxl` packages:
 -   `read_delim()` is for special "delimiters" separating data
 
 -   `read_excel()` is specifically for dealing with Excel files
+
+
+## Some classroom practice
+Let's:
+
+ - Create a new directory called `learn_by_doing`
+ 
+ - Load the `nba_data.xlsx` and get acquainted with the data.
+ 
+ - Use here::here() to load the data into R.
 
 ## APIs in Statistical Computing
 
@@ -131,7 +148,13 @@ APIs provide structured, real-time data access, allowing custom queries and ofte
 
 :::
 
+
+
+
 # Grammar of Graphics
+
+
+
 
 ## Grammar of Graphics: graphic forms from the ground up
 
@@ -144,17 +167,7 @@ Think of a data visualization or graph as a mapping
 The Grammar of Graphics (GoG) is a way of specifying exactly how to create a particular graph from a given data set. It helps us to see connections between apparently unrelated graphs and to systematically design new graphs.
 :::
 
-## Grammar of Graphics: why both?
 
-It's not just a neat party trick!
-
--   More flexible than "chart zoo" of named graphs
--   Software understands the structure of your graph
-    -   easily automate small multiples for data subsets
-
-::: callout-note
-"\[The grammar\] makes it easier for you to iteratively update a plot, changing a single feature at a time. The grammar is also useful because it suggests the high-level aspects of a plot that *can* be changed, giving you a framework to think about graphics, and hopefully shortening the distance from mind to paper. It also encourages the use of graphics customised to a particular problem, rather than relying on generic named graphics.
-:::
 
 ## Grammar of Graphics: components
 
@@ -195,7 +208,7 @@ ggplot(data = mpg)
 #| echo: true
 #| code-line-numbers: "2"
 ggplot(data = mpg, 
-       aes(x = class, y = hwy)
+       mapping = aes(x = class, y = hwy)
        )
 ```
 
@@ -207,7 +220,7 @@ ggplot(data = mpg,
 #| echo: true
 #| code-line-numbers: "4"
 ggplot(data = mpg, 
-       aes(x = class, y = hwy)
+       mapping = aes(x = class, y = hwy)
        ) +
   geom_jitter()
 ```
@@ -218,7 +231,7 @@ ggplot(data = mpg,
 #| echo: true
 #| code-line-numbers: "5"
 ggplot(data = mpg, 
-       aes(x = class, y = hwy)
+       mapping = aes(x = class, y = hwy)
        ) +
   geom_jitter() +
   geom_boxplot()
@@ -244,10 +257,15 @@ In ggplot2, we map **variables** from the data set to **aesthetics** on the char
 #| echo: true
 #| code-fold: true
 #| code-line-numbers: "6"
-ggplot(data = txhousing, aes(x = date, y = median, color = city)) + 
+ggplot(data = txhousing, 
+       mapping = aes(
+         x = date, 
+         y = median, 
+         color = city)) + 
   geom_point() + 
   geom_smooth(method = "loess") + 
-  xlab("Date") + ylab("Median Home Price") + 
+  xlab("Date") + 
+  ylab("Median Home Price") + 
   ggtitle("Texas Housing Prices")
 ```
 
