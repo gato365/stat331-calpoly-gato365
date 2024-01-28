@@ -18,9 +18,9 @@ library(palmerpenguins)
 
 Today we will...
 
-+ Review File Paths + R Projects
-+ Review Lab 2
-+ A note on font accessibility in graphics
++ Review of Visualization Principles
++ Theme
++ Questions on Lab 2
 + Mini lecture on text material
   + Using `dplyr` verbs to manipulate data
 + [PA 3: Identify the Mystery College](https://earobinson95.github.io/stat331-calpoly/practice-activities/PA3-find-the-mystery-college)

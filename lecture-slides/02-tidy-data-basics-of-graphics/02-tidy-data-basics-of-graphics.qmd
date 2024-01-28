@@ -18,7 +18,6 @@ library(tidyverse)
 Today we will...
 
 -   Mini lecture on text material
-    -   Strike Update
     -   Tidy Data
     -   Load External Data
     -   Graphics (and ggplot2)
@@ -628,7 +627,7 @@ I encourage you to use your neighbors for support!
 I have office hours TODAY, Tuesday (1/17) from 2:40pm - 3:30pm in 25-103
 :::
 
-## Wednesday, January 18th
+## Further
 
 Today we will...
 
