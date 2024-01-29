@@ -1,38 +1,60 @@
 ---
 title: "Midterm-1-Review"
-format: html
-editor: visual
+author: "Your Name"
+format: 
+  html:
+    self-contained: true
+    code-tools: true
+    toc: true
+editor: source
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
 ---
-Here are the revised questions that make sense within the context of R programming and the use of `dplyr` and `ggplot2` in data analysis:
 
-1. **Variable Types in `mtcars`**:
-Identify and specify the variable types (e.g., numeric, factor) in the `mtcars` dataset. Use the `?mtcars` command to access the help page and examine the variables more closely.
+[Download starter .qmd file](midterm_1_review.qmd)
 
-2. **Mean Horsepower by Transmission**:
-Calculate the mean horsepower (`hp`) grouped by transmission type (`am`). Ensure to differentiate between automatic and manual transmissions.
 
-3. **Categorize `mpg` Using `case_when`**:
-Categorize the `mpg` variable into four levels ("Low", "Moderate", "High", "Very High") using the `case_when` function. Define the levels based on the quartiles (Q1, Median/Q2, and Q3). Name the new variable as `split_mpg`.
+## Instructions
 
-4. **Violin Plot of Horsepower by `split_mpg`**:
-Create a violin plot to visualize the distribution of horsepower (`hp`) across the four `split_mpg` categories you defined in the previous question.
+The midterm will consist of 7-10 in-class questions and 2-3 take-home questions. The questions will cover the topics and packages that we have learned so far in the course and some that we will talk about this week. To prepare for the midterm, you should review the lecture notes, the assignments, and this review. You should also write out all the functions that you know for each package and explain what they do and how to use them.
 
-5. **Highest Horsepower Group in `split_mpg`**:
-Determine which `split_mpg` group has the highest average horsepower. Summarize the results in a way that clearly identifies the group with the highest horsepower.
+You will have 50 minutes to complete the in-class questions during the class time. The in-class questions will be a mix of multiple choice, open ended, and code-based questions. 
 
-6. **Comparing Weight and MPG Visualizations**:
-Produce two different visualizations to display the relationship between weight (`wt`) and miles per gallon (`mpg`), while also showing the different types of transmission (`am`). After creating the plots, provide an analysis of which visualization is more effective in illustrating the differences between transmission types and why.
+You will have until Friday at 11:59 pm to complete the take-home questions. The take-home questions will be more challenging and require you to apply your skills and knowledge to new problems. You will need to write and run your code in R.
 
-7. **Simulate Student Data with `rnorm`**:
-Use the `rnorm` function to simulate three variables representing a sample of 100 students: GPA (mean: 3.5, standard deviation: 0.1), study hours (mean: 35, standard deviation: 3), and work hours (mean: 15, standard deviation: 1).
-
-8. **Study Hours and Work Hours Relationship Plot**:
-Based on the simulated data from the previous question, create a plot that visualizes the relationship between study hours and work hours. Analyze the plot to understand the distribution and correlation, if any, between the two variables.
+Please make sure that you follow the academic integrity policy and do not copy or share your answers with anyone else. If you have any questions or concerns, please contact me by email or learning hours.
 
 
 
-9. **Evaluating a Misleading Visualization in `ggplot2`**:
-Review the following plot. Explain why representing months as numerical values on the x-axis could lead to a misleading interpretation of the `Ozone` data in the `airquality` dataset.
+## Questions
+
+### `mtcars`questions
+
+1.  **Variable Types in `mtcars`**: Identify and specify the variable types (e.g., numeric, factor) in the `mtcars` dataset. Use the `?mtcars` command to access the help page and examine the variables more closely.
+
+2.  **Mean Horsepower by Transmission**: Calculate the mean horsepower (`hp`) grouped by transmission type (`am`). Ensure to differentiate between automatic and manual transmissions.
+
+3.  **Categorize `mpg` Using `case_when`**: Categorize the `mpg` variable into four levels ("Low", "Moderate", "High", "Very High") using the `case_when` function. Define the levels based on the quartiles (Q1, Median/Q2, and Q3). Name the new variable as `split_mpg`.
+
+4.  **Violin Plot of Horsepower by `split_mpg`**: Create a violin plot to visualize the distribution of horsepower (`hp`) across the four `split_mpg` categories you defined in the previous question.
+
+5.  **Highest Horsepower Group in `split_mpg`**: Determine which `split_mpg` group has the highest average horsepower. Summarize the results in a way that clearly identifies the group with the highest horsepower.
+
+6.  **Comparing Weight and MPG Visualizations**: Produce two different visualizations to display the relationship between weight (`wt`) and miles per gallon (`mpg`), while also showing the different types of transmission (`am`). After creating the plots, provide an analysis of which visualization is more effective in illustrating the differences between transmission types and why.
+
+### Simulate data questions
+
+7.  **Simulate Student Data with `rnorm`**: Use the `rnorm` function to simulate three variables representing a sample of 100 students: GPA (mean: 3.5, standard deviation: 0.1), study hours (mean: 35, standard deviation: 3), and work hours (mean: 15, standard deviation: 1).
+
+8.  **Study Hours and Work Hours Relationship Plot**: Based on the simulated data from the previous question, create a plot that visualizes the relationship between study hours and work hours. Analyze the plot to understand the distribution and correlation, if any, between the two variables.
+
+
+### `airquality` data questions
+
+9.  **Evaluating a Misleading Visualization in `ggplot2`**: Review the following plot. Explain why representing months as numerical values on the x-axis could lead to a misleading interpretation of the `Ozone` data in the `airquality` dataset.
 
 ```{r}
 library(ggplot2)
@@ -41,17 +63,34 @@ ggplot(airquality, aes(x = Month, y = Ozone)) +
   geom_point() 
 ```
 
-10. **Improving the Month Representation in a ggplot**:
-The `airquality` dataset uses numeric values for months. Modify the ggplot below to replace numeric month values with their corresponding month names for clearer interpretation. Use the `airquality` dataset and display the `Ozone` levels over the months.
+10. **Improving the Month Representation in a ggplot**: The `airquality` dataset uses numeric values for months. Modify the ggplot below to replace numeric month values with their corresponding month names for clearer interpretation. Use the `airquality` dataset and display the `Ozone` levels over the months.
+
 ```{r}
 ## Answer for question 10.
 ```
 
-11. **Debugging Line Display in ggplot2**:
-The following ggplot code is intended to show the relationship between `Solar.R` and `Ozone`, with lines representing different months. However, the lines are not displaying as expected. Correct the code so that each month's data is connected by lines with distinct line types.
+11. **Debugging Line Display in ggplot2**: The following ggplot code is intended to show the relationship between `Solar.R` and `Ozone`, with lines representing different months. However, the lines are not displaying as expected. Correct the code so that each month's data is connected by lines with distinct line types.
+
 ```{r}
 ggplot(airquality, aes(x = Solar.R, y = Ozone)) + 
   geom_point(aes(color = factor(Month))) +
   geom_line(aes(linetype = factor(Month, levels = c("Five","Six","Seven","Eight","Nine"))))
 ```
+
 Provide the corrected ggplot code to ensure that lines are properly displayed for each month, and explain why the original code failed to show the lines.
+
+### `AirPassengers` data questions
+
+
+12.  Using the `datasets::AirPassengers` dataset, which contains the monthly totals of international airline passengers from 1949 to 1960, perform the following steps in R:
+
+a. Use the `rownames_to_column()` function from the tibble package to convert the row names, which are dates, into a column called “date”.
+
+
+b. Use the `pivot_longer()` function from the tidyr package to reshape the data from wide to long format, where the column name "AirPassengers" becomes a column called "___" and the values become a column called "___". Think of names that make the most sense based on the information within the help function applied to the dataset.
+
+c. Based on the previous manipulation, create a visualization to view the month, year, and number of passengers variables. Make the plot as professional as possible. Make sure to use the `forecats` package to make the sure months are in order.
+
+d. Explain why it makes sense to use the `pivot_longer()` in this context when wanting to analyze the number of passengers across the years and months.
+
+
