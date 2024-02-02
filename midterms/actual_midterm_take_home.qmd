@@ -1,0 +1,107 @@
+---
+title: "Midterm Exam I Take Home"
+format: html
+editor: visual
+---
+
+
+## Rules: 
+Certainly, here's a more detailed version of the rules for the take-home exam:
+
+1. **Collaboration**: You are allowed to collaborate with your assigned group members. This includes discussing the exam questions, sharing ideas, and working together to find solutions. However, you should ensure that all final answers are your own work and not simply copied from others.
+
+2. **Use of ChatGPT**: You are permitted to use ChatGPT as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that ChatGPT is a tool and not a substitute for your own understanding and analysis.
+
+3. **No External Communication**: You are not allowed to communicate with anyone outside of this class about the exam. This includes classmates not in your assigned group, tutors, friends, family, online forums, etc. The goal of this rule is to ensure that your work is your own and not influenced by external sources.
+
+4. **Reporting Communication**: If you do have any conversations related to the exam (within your group or with ChatGPT), you should report this to the instructor. Include who you spoke with and a brief
+
+
+
+**Use the survey.csv data frame from week 2 lab 2.**
+
+## Data Context
+
+The Portal Project is a long-term ecological study being conducted near Portal, AZ. Since 1977, the site has been used to study the interactions among rodents, ants and plants and their respective responses to climate. To study the interactions among organisms, we experimentally manipulate access to 24 study plots. This study has produced over 100 scientific papers and is one of the longest running ecological studies in the U.S.
+
+We will be investigating the animal species diversity and weights found within plots at the Portal study site. The data set is stored as a comma separated value (CSV) file. Each row holds information for a single animal, and the columns represent:
+
+| Column            | Description                        |
+|-------------------|------------------------------------|
+| `record_id`       | Unique id for the observation      |
+| `month`           | month of observation               |
+| `day`             | day of observation                 |
+| `year`            | year of observation                |
+| `plot_id`         | ID of a particular plot            |
+| `species_id`      | 2-letter code                      |
+| `sex`             | sex of animal ("M", "F")           |
+| `hindfoot_length` | length of the hindfoot in mm       |
+| `weight`          | weight of the animal in grams      |
+| `genus`           | genus of animal                    |
+| `species`         | species of animal                  |
+| `taxon`           | e.g. Rodent, Reptile, Bird, Rabbit |
+| `plot_type`       | type of plot                       |
+
+
+
+
+## Q1: Recreate this plot with as much accuracy as possible. Pay attention to as much detail as possible.
+
+![](recreate_image1.png)
+
+
+
+## Q2: Explain this visualization in Q1
+
+\[Remove this Guideline:
+
+1.  **Identify the Key Elements**: Start by identifying the key elements in the visualization. This could include the type of graph, the variables being compared, any patterns or trends you notice, and any surprising or unexpected results.
+
+2.  **Describe the Findings**: Provide a detailed description of your findings. This should go beyond just stating what the graph shows, and should include your interpretation of the data. What story does the data tell? What conclusions can you draw?
+
+3.  **Use Your Own Words**: It's important to express your findings in your own words. This not only ensures that you understand the material, but also allows you to present your unique perspective. Avoid copying and pasting your team's words. Your individual insight is valuable!
+
+4.  **Provide Evidence**: Support your findings with evidence from the visualization. This could include specific data points, trends, or patterns that you've identified.
+
+5.  **Discuss the Implications**: Discuss the implications of your findings. How do they fit into the larger context of what you're studying? Do they suggest any further areas for research or investigation?
+
+6.  **Review and Revise**: Finally, review your explanation and revise as necessary for clarity, coherence, and conciseness. Make sure your explanation accurately reflects the data in the visualization and that your interpretations are well-supported.
+
+**This should be 2-3 paragraphs**
+
+\]
+
+## Q3: Create a Visualization
+
+**How can I create graphics that display the frequency of each level, ensuring they are visually informative for understanding the relationship between variables? Specifically:**
+
+1.  **Species Names**: Instead of using species IDs, the researcher want to use species names. The researcher is interested in the following species: **DM**, **DO**, **DS**, and **NL**.
+
+2.  **Years**: The researcher wants to focus on the years **1977-1979**.
+
+3.  **Genus**: The researcher is interested in the following genera: **Chaetodipus**, **Dipodomys**, **Neotoma**, and **Onychomys**.
+
+4.  **Day of the Week**: Specifically, I want to analyze data for the days **Tues**, **Mon**, **Sat**, and **Sun**. This order is vital for the researcher to answer a particular conclusion.
+
+Could you please guide me on how to achieve this? 📊.
+
+
+## Q4: Explain this visualization in Q3
+
+\[Remove this Guideline:
+
+1.  **Identify the Key Elements**: Start by identifying the key elements in the visualization. This could include the type of graph, the variables being compared, any patterns or trends you notice, and any surprising or unexpected results.
+
+2.  **Describe the Findings**: Provide a detailed description of your findings. This should go beyond just stating what the graph shows, and should include your interpretation of the data. What story does the data tell? What conclusions can you draw?
+
+3.  **Use Your Own Words**: It's important to express your findings in your own words. This not only ensures that you understand the material, but also allows you to present your unique perspective. Avoid copying and pasting your team's words. Your individual insight is valuable!
+
+4.  **Provide Evidence**: Support your findings with evidence from the visualization. This could include specific data points, trends, or patterns that you've identified.
+
+5.  **Discuss the Implications**: Discuss the implications of your findings. How do they fit into the larger context of what you're studying? Do they suggest any further areas for research or investigation?
+
+6.  **Review and Revise**: Finally, review your explanation and revise as necessary for clarity, coherence, and conciseness. Make sure your explanation accurately reflects the data in the visualization and that your interpretations are well-supported.
+
+**This should be 2-3 paragraphs**
+
+\]
