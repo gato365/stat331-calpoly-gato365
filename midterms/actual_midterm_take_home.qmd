@@ -4,6 +4,9 @@ format: html
 editor: visual
 ---
 
+# Midterm Exam I Take Home Assignment
+
+[Download starter .qmd file](actual_midterm_take_home.qmd)
 
 ## Rules: 
 Certainly, here's a more detailed version of the rules for the take-home exam:
@@ -14,7 +17,7 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 
 3. **No External Communication**: You are not allowed to communicate with anyone outside of this class about the exam. This includes classmates not in your assigned group, tutors, friends, family, online forums, etc. The goal of this rule is to ensure that your work is your own and not influenced by external sources.
 
-4. **Reporting Communication**: If you do have any conversations related to the exam (within your group or with ChatGPT), you should report this to the instructor. Include who you spoke with and a brief
+4. **Reporting Communication**: If you do have any conversations related to the exam (within your group or with ChatGPT), you should report this to the instructor. Include who you spoke with and a brief section at the bottom of the markdown file regarding your collaboration efforts.
 
 
 
@@ -47,7 +50,7 @@ We will be investigating the animal species diversity and weights found within p
 
 ## Q1: Recreate this plot with as much accuracy as possible. Pay attention to as much detail as possible.
 
-![](recreate_image1.png)
+![](https://gato365.github.io/stat331-calpoly-gato365/midterms/recreate_image1.png)
 
 
 
@@ -105,3 +108,6 @@ Could you please guide me on how to achieve this? 📊.
 **This should be 2-3 paragraphs**
 
 \]
+
+
+## Q5: How did you use outside resources to complete these questions?
