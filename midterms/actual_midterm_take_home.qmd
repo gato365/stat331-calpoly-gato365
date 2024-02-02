@@ -8,18 +8,19 @@ editor: visual
 
 [Download starter .qmd file](actual_midterm_take_home.qmd)
 
-## Rules: 
+## Rules:
+
 Certainly, here's a more detailed version of the rules for the take-home exam:
 
-1. **Collaboration**: You are allowed to collaborate with your assigned group members. This includes discussing the exam questions, sharing ideas, and working together to find solutions. However, you should ensure that all final answers are your own work and not simply copied from others.
+1.  **Collaboration**: You are allowed to collaborate with your assigned group members. This includes discussing the exam questions, sharing ideas, and working together to find solutions. However, you should ensure that all final answers are your own work and not simply copied from others.
 
-2. **Use of ChatGPT**: You are permitted to use ChatGPT as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that ChatGPT is a tool and not a substitute for your own understanding and analysis.
+2.  **Use of ChatGPT**: You are permitted to use ChatGPT as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that ChatGPT is a tool and not a substitute for your own understanding and analysis.
 
-3. **No External Communication**: You are not allowed to communicate with anyone outside of this class about the exam. This includes classmates not in your assigned group, tutors, friends, family, online forums, etc. The goal of this rule is to ensure that your work is your own and not influenced by external sources.
+3.  **No External Communication**: You are not allowed to communicate with anyone outside of this class about the exam. This includes classmates not in your assigned group, tutors, friends, family, online forums, etc. The goal of this rule is to ensure that your work is your own and not influenced by external sources.
 
-4. **Reporting Communication**: If you do have any conversations related to the exam (within your group or with ChatGPT), you should report this to the instructor. Include who you spoke with and a brief section at the bottom of the markdown file regarding your collaboration efforts.
+4.  **Reporting Communication**: If you do have any conversations related to the exam (within your group or with ChatGPT), you should report this to the instructor. Include who you spoke with and a brief section at the bottom of the markdown file regarding your collaboration efforts.
 
-
+**5. Please note that the midterm assignment is expected to be submitted in HTML format by 7 am on the upcoming Monday morning.**
 
 **Use the survey.csv data frame from week 2 lab 2.**
 
@@ -45,14 +46,9 @@ We will be investigating the animal species diversity and weights found within p
 | `taxon`           | e.g. Rodent, Reptile, Bird, Rabbit |
 | `plot_type`       | type of plot                       |
 
-
-
-
 ## Q1: Recreate this plot with as much accuracy as possible. Pay attention to as much detail as possible.
 
 ![](https://gato365.github.io/stat331-calpoly-gato365/midterms/recreate_image1.png)
-
-
 
 ## Q2: Explain this visualization in Q1
 
@@ -88,7 +84,6 @@ We will be investigating the animal species diversity and weights found within p
 
 Could you please guide me on how to achieve this? 📊.
 
-
 ## Q4: Explain this visualization in Q3
 
 \[Remove this Guideline:
@@ -108,6 +103,5 @@ Could you please guide me on how to achieve this? 📊.
 **This should be 2-3 paragraphs**
 
 \]
-
 
 ## Q5: How did you use outside resources to complete these questions?
