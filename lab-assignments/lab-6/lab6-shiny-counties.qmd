@@ -1,0 +1,150 @@
+---
+title: "Lab 6: Shiny Counties"
+author: "Your name"
+format: 
+  html:
+    self-contained: true
+    code-tools: true
+    toc: true
+    number-sections: true
+editor: source
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
+---
+
+[Download starter .qmd file](lab6-shiny-counties.qmd)
+
+
+
+
+
+**1.** Begin by installing the `remotes` package in R. This package provides a straightforward way to install R packages from GitHub, Bitbucket, and other sources. You can install it using the following command:
+
+```{r}
+#| eval: false
+install.packages("remotes")
+```
+
+**2.** The `remotes` package is a lightweight replacement of the `devtools` install functions. It allows you to install R packages from various sources, including GitHub, GitLab, Bitbucket, and Bioconductor. One of the main advantages of `remotes` is that it has fewer dependencies compared to `devtools`, making it faster and easier to install.
+
+**3.** After successfully installing the `remotes` package, you can use it to install the `htmltab` package from GitHub. The `htmltab` package is a robust HTML table parser that provides methods for scraping and reshaping HTML tables. Install it using the following command:
+
+```{r}
+remotes::install_github("htmltab/htmltab")
+```
+
+Happy coding! 🚀
+
+
+**4.** Below are trivia questions you should answer them, try not to Google them all, but try at 1st.  Have fun with some of these questions!
+
+    1. Which state is home to the famous city of Chicago and is known for its deep-dish pizza?
+    2. In which state can you find the Gateway Arch in St. Louis?
+    3. Which state is surrounded by four of the five Great Lakes?
+    4. Which state is named after the Platte River, which means "flat water" in French?
+    5. In which state will you find the Carlsbad Caverns National Park?
+    6. Which state is famous for its dairy products and hosts the annual EAA AirVenture Oshkosh aviation event?
+    7. Where can you visit the Grand Canyon National Park?
+    8. Which state is known for its vibrant music scene, especially jazz and blues?
+    9. In which state can you enjoy fresh lobster and explore picturesque coastal towns like Bar Harbor?
+    10. Which state is home to the Rocky Mountains and offers stunning outdoor recreational opportunities?
+    
+
+
+
+
+
+
+
+
+
+**6.** Start by creating an R script. Save this file by naming it `data-analysis-counties.R`. In this script, store the names of the states as a vector. Name this vector `state_names`. You will not use this vector yet but it is nice to refer to it in the `shiny`. 
+
+**7.** Next, import the population data for each county in each state. Go to [https://en.wikipedia.org/wiki/List_of_counties_in_California](California's) page so you see the general structure. Use the following format to do this:
+
+```{r}
+#| eval: false
+htmltab::htmltab("https://en.wikipedia.org/wiki/List_of_counties_in_California", which = 1)
+```
+
+**Please note that the structure of the Wikipedia page may vary for some states. In such cases, you may need to adjust the `which` parameter to `2` or another number.**
+
+*The general format can be seen as:*
+
+```{r}
+#| eval: false
+htmltab::htmltab("https://en.wikipedia.org/wiki/List_of_counties_in_STATE_NAME", which = 1)
+```
+
+
+
+
+**Also note that you will have 10 data frames based on the 10 states.**
+
+**8.** After importing the data frames into R, perform the following operations: **(Hint: Split up this task with your friends and ChatGPT)**
+
+   a. Create a new variable named `State` that contains the initials of the state.
+   
+   b. Extract the following columns from each data frame: `State`, `County`, `Population`, `Est.`(Year Established). You may need to inspect each data frame and rename the variables as necessary to ensure they are meaningful. Make sure remove irrelevant information with `Est.`. You will need to do something to `Population` variable, that is all I am going to say.
+   
+   c. Create a new variable named `Age` that represents the age of each county in years. Now you can remove `Est.` from the data frame.
+   
+   d. Refer to this [website](https://en.wikipedia.org/wiki/List_of_regions_of_the_United_States) to determine the region of each state. Then, create a new column named `Region`.
+   
+   e. Combine all the data frames together into 1 data frame named `states_df`.
+
+**Remember to use the source function to store the data manipulation in another file for the next question.**
+
+
+
+
+
+
+**9.** Construct a comprehensive Shiny application that encapsulates the following features into one interactive platform:
+
+a. **Summary Table**: Include a feature that allows users to view a summary table displaying the mean county size, standard deviation of county size, and the count of counties, filtered by the user's choice of region or state. The following is an example of the code needed to create a table.
+
+```{r}
+#| eval: false
+ui <- fluidPage(
+  mainPanel(tableOutput('summaryTable'))
+)
+
+server <- function(input, output) {
+  output$summaryTable <- renderTable({
+    # Data processing and summary table generation code here
+  })
+}
+
+```
+
+
+
+b. **Data Visualization**: Integrate an interactive plot that illustrates the relationship between `Age` and `County Size`, using color to represent different `Regions` and facets to delineate `States`. You may also explore alternative visualizations that include these data dimensions.
+
+c. **Conditional Panel Interaction**: Employ a conditional panel to enhance user interaction. Let users switch between either states or regions to display the relationship between selected option and county's population. 
+
+Your Shiny app should be constructed such that it provides a seamless experience, allowing users to navigate between these features without the need for separate applications. Below is an example framework to get you started with the conditional panel:
+
+```{r}
+ui <- fluidPage(
+  selectInput("viewOption", "Select Data View:", choices = c("Region", "State")),
+  # Insert additional UI components for Summary Table and Data Visualization here
+  conditionalPanel(
+    condition = "input.viewOption == 'Region'",
+    shiny::checkboxGroupInput("selectRegions", "Please select Region")
+    # Include additional conditional UI components as needed
+  )
+  # Consider adding another conditionalPanel for the Dynamic Visualization feature
+)
+
+server <- function(input, output) {
+  # Server logic to handle rendering of Summary Table, Data Visualization, and Conditional Panel
+}
+```
+
+Incorporate these elements to create an all-encompassing application that not only educates but also engages users with the interactive exploration of county data.
+
