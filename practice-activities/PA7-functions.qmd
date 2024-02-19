@@ -22,8 +22,7 @@ You will write several small functions, then use them to unscramble a message. M
 ```{r}
 divide_and_round <- function(nums){
   
-  my_min <- min(nums, na.rm = TRUE)
-  divided <- nums/my_min
+  
   
 }
 ```
