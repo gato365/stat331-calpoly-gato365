@@ -105,7 +105,7 @@ htmltab::htmltab("https://en.wikipedia.org/wiki/List_of_counties_in_STATE_NAME",
 
 **9.** Construct a comprehensive Shiny application that encapsulates the following features into one interactive platform:
 
-a. **Summary Table**: Include a feature that allows users to view a summary table displaying the mean county size, standard deviation of county size, and the count of counties, filtered by the user's choice of region or state. The following is an example of the code needed to create a table.
+a. **Region Table Development**: Using the `states_df` data frame, create a Shiny application that displays a summary table for selected regions. The table should include the mean population, standard deviation of the population, and sample size for each selected region. Use the `renderTable` function to display the table in the main panel.
 
 ```{r}
 #| eval: false
@@ -123,9 +123,9 @@ server <- function(input, output) {
 
 
 
-b. **Data Visualization**: Integrate an interactive plot that illustrates the relationship between `Age` and `County Size`, using color to represent different `Regions` and facets to delineate `States`. You may also explore alternative visualizations that include these data dimensions.
+b. **Population vs Age Plot Development**: Modify the Shiny application to include a scatter plot of population vs age for selected states. Use the `renderPlot` function to display the plot in the main panel.
 
-c. **Conditional Panel Interaction**: Employ a conditional panel to enhance user interaction. Let users switch between either states or regions to display the relationship between selected option and county's population. 
+c. **Conditional Panel Interaction**:  Finally, modify the Shiny application to include a conditional panel. The user should be able to choose between viewing the region summary table and the population vs age plot. Use the `conditionalPanel` function to display the appropriate output based on the user’s selection. 
 
 Your Shiny app should be constructed such that it provides a seamless experience, allowing users to navigate between these features without the need for separate applications. Below is an example framework to get you started with the conditional panel:
 

@@ -3091,7 +3091,7 @@ vertical-align: -.125em;
 <p><strong>Remember to use the source function to store the data manipulation in another file for the next question.</strong></p>
 <p><strong>9.</strong> Construct a comprehensive Shiny application that encapsulates the following features into one interactive platform:</p>
 <ol type="a">
-<li><strong>Summary Table</strong>: Include a feature that allows users to view a summary table displaying the mean county size, standard deviation of county size, and the count of counties, filtered by the user’s choice of region or state. The following is an example of the code needed to create a table.</li>
+<li><strong>Region Table Development</strong>: Using the <code>states_df</code> data frame, create a Shiny application that displays a summary table for selected regions. The table should include the mean population, standard deviation of the population, and sample size for each selected region. Use the <code>renderTable</code> function to display the table in the main panel.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
@@ -3105,8 +3105,8 @@ vertical-align: -.125em;
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="a">
-<li><p><strong>Data Visualization</strong>: Integrate an interactive plot that illustrates the relationship between <code>Age</code> and <code>County Size</code>, using color to represent different <code>Regions</code> and facets to delineate <code>States</code>. You may also explore alternative visualizations that include these data dimensions.</p></li>
-<li><p><strong>Conditional Panel Interaction</strong>: Employ a conditional panel to enhance user interaction. Let users switch between either states or regions to display the relationship between selected option and county’s population.</p></li>
+<li><p><strong>Population vs Age Plot Development</strong>: Modify the Shiny application to include a scatter plot of population vs age for selected states. Use the <code>renderPlot</code> function to display the plot in the main panel.</p></li>
+<li><p><strong>Conditional Panel Interaction</strong>: Finally, modify the Shiny application to include a conditional panel. The user should be able to choose between viewing the region summary table and the population vs age plot. Use the <code>conditionalPanel</code> function to display the appropriate output based on the user’s selection.</p></li>
 </ol>
 <p>Your Shiny app should be constructed such that it provides a seamless experience, allowing users to navigate between these features without the need for separate applications. Below is an example framework to get you started with the conditional panel:</p>
 <div class="cell">
@@ -3524,7 +3524,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a>**9.** Construct a comprehensive Shiny application that encapsulates the following features into one interactive platform:</span>
 <span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>a. **Summary Table**: Include a feature that allows users to view a summary table displaying the mean county size, standard deviation of county size, and the count of counties, filtered by the user&#39;s choice of region or state. The following is an example of the code needed to create a table.</span>
+<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>a. **Region Table Development**: Using the <span class="in">`states_df`</span> data frame, create a Shiny application that displays a summary table for selected regions. The table should include the mean population, standard deviation of the population, and sample size for each selected region. Use the <span class="in">`renderTable`</span> function to display the table in the main panel.</span>
 <span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
@@ -3542,9 +3542,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>b. **Data Visualization**: Integrate an interactive plot that illustrates the relationship between <span class="in">`Age`</span> and <span class="in">`County Size`</span>, using color to represent different <span class="in">`Regions`</span> and facets to delineate <span class="in">`States`</span>. You may also explore alternative visualizations that include these data dimensions.</span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>b. **Population vs Age Plot Development**: Modify the Shiny application to include a scatter plot of population vs age for selected states. Use the <span class="in">`renderPlot`</span> function to display the plot in the main panel.</span>
 <span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>c. **Conditional Panel Interaction**: Employ a conditional panel to enhance user interaction. Let users switch between either states or regions to display the relationship between selected option and county&#39;s population. </span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>c. **Conditional Panel Interaction**:  Finally, modify the Shiny application to include a conditional panel. The user should be able to choose between viewing the region summary table and the population vs age plot. Use the <span class="in">`conditionalPanel`</span> function to display the appropriate output based on the user’s selection. </span>
 <span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a>Your Shiny app should be constructed such that it provides a seamless experience, allowing users to navigate between these features without the need for separate applications. Below is an example framework to get you started with the conditional panel:</span>
 <span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a></span>
