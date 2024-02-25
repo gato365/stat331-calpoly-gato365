@@ -1,0 +1,218 @@
+---
+title: "Midterm-2-Review"
+author: "Your Name"
+format: 
+  html:
+    self-contained: true
+    code-tools: true
+    toc: true
+editor: source
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
+---
+
+[Download starter .qmd file](midterm_2_review.qmd)
+
+
+## Instructions
+
+The midterm will consist of 7-12 in-class questions and 2-3 take-home questions. The questions will cover the topics and packages that we have learned so far in the course and some that we will talk about this week. To prepare for the midterm, you should review the lecture notes, the assignments, and this review. You should also write out all the functions that you know for each package and explain what they do and how to use them.
+
+You will have 50 minutes to complete the in-class questions during the class time. The in-class questions will be a mix of multiple choice, open ended, and code-based questions. 
+
+You will have until Monday March 4 at 7:00 am to complete the take-home questions. The take-home questions will be more challenging and require you to apply your skills and knowledge to new problems. You will need to write and run your code in R.
+
+Please make sure that you follow the academic integrity policy and do not copy or share your answers with anyone else. If you have any questions or concerns, please contact me by email or learning hours.
+
+
+
+
+## STAT 331 General Midterm I Review Outline
+
+
+### Review of dplyr Functions
+
+#### Select
+- **Definition**: Selects columns from a data frame.
+- **Input**: Data frame, column names.
+- **Output**: Data frame with selected columns.
+
+#### Filter
+- **Definition**: Filters rows based on a specified condition.
+- **Input**: Data frame, condition.
+- **Output**: Data frame with rows that meet the condition.
+
+#### Mutate
+- **Definition**: Creates new columns or modifies existing ones.
+- **Input**: Data frame, expressions to create new columns.
+- **Output**: Modified data frame.
+
+#### Group By and Summarize
+- **Definition**: Groups data by one or more variables and computes summary statistics.
+- **Input**: Data frame, grouping variables, summary functions.
+- **Output**: Summarized data frame.
+
+#### Arrange
+- **Definition**: Orders rows by one or more variables.
+- **Input**: Data frame, variables to order by.
+- **Output**: Reordered data frame.
+
+### Review of ggplot2 Visualizations
+
+- **Definition**: Creates complex visualizations from data in a data frame.
+- **Input**: Data frame, aesthetic mappings, geometric objects.
+- **Output**: Visualizations such as plots and graphs.
+
+### Pivot Wider and Longer
+
+#### Pivot Wider
+- **Definition**: Transforms data from long to wide format.
+- **Input**: Long data frame.
+- **Output**: Wide data frame.
+
+#### Pivot Longer
+- **Definition**: Transforms data from wide to long format.
+- **Input**: Wide data frame.
+- **Output**: Long data frame.
+
+### Joins and Binds
+
+#### Joins
+- **Definition**: Merges two data frames based on common variables.
+- **Input**: Two data frames, key variables.
+- **Output**: Merged data frame.
+
+#### Binds
+- **Definition**: Combines two data frames by rows or columns.
+- **Input**: Two data frames.
+- **Output**: Combined data frame.
+
+### Strings and lubridate
+
+#### Strings
+- **Definition**: Manipulates and analyzes text data.
+- **Input**: Character vectors.
+- **Output**: Modified text data.
+
+#### lubridate
+- **Definition**: Parses and manipulates date-time data.
+- **Input**: Character vectors representing dates and times.
+- **Output**: Date-time objects.
+
+### Functions and Functions for Data Frames
+
+- **Definition**: Custom functions to automate repetitive tasks on data frames.
+- **Input**: Data frame, parameters for the function.
+- **Output**: Modified data frame or computed results.
+
+### rlang Elements
+
+#### Embrace (`{{ }}`)
+- **Definition**: Captures and evaluates variables in functions.
+- **Input**: Variable name.
+- **Output**: Evaluated variable.
+
+#### Walrus Operator (`:=`)
+- **Definition**: Dynamically names variables within functions.
+- **Input**: Variable name, value.
+- **Output**: Data frame with dynamically named variable.
+
+#### Bang Bang (`!!`)
+- **Definition**: Forces the evaluation of a captured variable.
+- **Input**: Captured variable.
+- **Output**: Evaluated variable.
+
+
+```{r}
+url <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/practice-activities/data/sql-murder-setup.R"
+if (!"purrr" %in% installed.packages()) install.packages("purrr")
+source(url)
+
+
+```
+
+
+![Database schema](https://mystery.knightlab.com/schema.png)
+
+[Provide description for SQL database]
+
+
+1. Find the average salary of silver members.
+
+2. Plot the average time gold and regular members stay in gym for January, February, and March.
+
+3. Of the individuals that had  mentioned either "SQL Symphony Concert" or "Dealing with failure is easy:", what is their average Salary. (Hint, Make sure the individuals are unique)
+
+4. Who is this person? Their person id is "80571". What is their Name, salary and address? Plot how often do they go to the gym. Plot how much time the spend in the gym per week.
+
+-----------------------
+
+Get experimental data from: 
+
+```{r}
+url <-  url_base <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterm-exam/data/experimental_data.csv"
+experimental_data_df <- read.csv(url)
+```
+
+5. Pivot this experimental data wider. Then find the average height for time point. 
+
+
+6. Make a variable out of the rownames in mtcars select only mpg and hp. Pivot longer and find the average
+
+
+
+-----------------------
+
+
+7.  Write a function named greet_time that takes one argument, time, representing the hour of the day (0-23). The function should return "Good morning!" if the time is less than 12, "Good afternoon!" if the time is between 12 and 18 (inclusive), and "Good evening!" for times greater than 18.
+
+8. 
+
+A weighted average is a fundamental concept in statistics and computer science, crucial for situations where different data points contribute unequally to the final average. Unlike a simple arithmetic mean, where each value in a set contributes equally, a weighted average multiplies each data point by a corresponding weight before summing them up, and the result is divided by the total of the weights. This method is essential in fields like finance for calculating the average return of an investment portfolio where different investments have different stakes, or in educational grading systems where different assignments or exams contribute differently to a final grade.
+
+The calculate_weighted_average function in R, as shown, implements this concept by taking two parallel vectors: values representing the data points and weights representing their corresponding importance. The function carefully handles special cases such as the presence of NA values and situations where all weights are zero, ensuring the weighted average calculation is both accurate and robust. This approach allows for more nuanced data analysis, enabling statisticians and computer scientists to derive meaningful averages that reflect the varying significance of each data point within a dataset.
+
+**Below is a function intended to calculate the weighted average of a vector, but it contains an error and lacks consideration for a specific edge case. The function takes two arguments: values, a numeric vector of values, and weights, a numeric vector of weights corresponding to those values. Identify and correct the mistake, and modify the function to handle the case where all weights are zero, which should return NA since a weighted average cannot be calculated.**
+```{r}
+calculate_weighted_average <- function(values, weights) {
+  if (length(values) != length(weights)) {
+    stop("values and weights must be of the same length")
+  }
+  
+  if (all(weights == 0)) {
+    return(NA)  # Return NA if all weights are zero
+  }
+  
+  weighted_sum <- sum(values * weights, na.rm = TRUE)
+  total_weight <- sum(weights, na.rm = TRUE)
+  
+  if (total_weight == 0) {
+    return(NA)  # Avoid division by zero by returning NA
+  } else {
+    avg <- weighted_sum / total_weight
+    return(avg)
+  }
+}
+
+# Example usage:
+values <- c(1, 2, 3, NA)
+weights <- c(0, 0, 0, 0)  # Edge case where all weights are zero
+calculate_weighted_average(values, weights)
+```
+
+9. Explain what the following function does. Specifically, describe the roles of {{}} and := within the function.
+
+```{r}
+dynamic_filter_rename <- function(data, filter_var, new_name, threshold) {
+  df <- data %>%
+    filter({{ filter_var }} > threshold) %>%
+    rename(!!new_name := {{ filter_var }})
+  return(df)
+}
+```
+
+
+10.  Create a function named `apply_percentile_rank` that takes a dataframe and a vector of column names, then calculates the percentile rank for the values in those columns. The percentile rank of a value is the percentage of observations in the dataset that are less than or equal to that value.

@@ -22,7 +22,9 @@ You will write several small functions, then use them to unscramble a message. M
 ```{r}
 divide_and_round <- function(nums){
   
-  
+  ## This is starter code
+  my_min <- min(nums, na.rm = TRUE)
+  divided <- nums/my_min
   
 }
 ```
@@ -44,6 +46,7 @@ divide_and_round(test)
 ```{r}
 no_nines_or_twelves <- function(nums){
   
+  ## This is starter code
   check <- !(nums %% 9 == 0)
   
 }
@@ -68,11 +71,12 @@ no_nines_or_twelves(test)
 ```{r}
 every_other <- function(vec){
   
+  ## This is starter code
   if(start == 2){
-
+    
     
   } else if(start == 1) {
-
+    
     
   }
   
@@ -99,7 +103,7 @@ every_other(test, start = 2)
 
 ```{r}
 shorten <- function(){
-
+  
   
 }
 
