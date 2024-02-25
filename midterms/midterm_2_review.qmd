@@ -1,5 +1,5 @@
 ---
-title: "Midterm-2-Review"
+title: "Midterm 2 Review"
 author: "Your Name"
 format: 
   html:
@@ -27,10 +27,11 @@ You will have until Monday March 4 at 7:00 am to complete the take-home question
 
 Please make sure that you follow the academic integrity policy and do not copy or share your answers with anyone else. If you have any questions or concerns, please contact me by email or learning hours.
 
+<span style="color:red">**There will be no key given for this review**</span>
 
 
 
-## STAT 331 General Midterm I Review Outline
+# STAT 331 General Midterm 2 Review Outline
 
 
 ### Review of dplyr Functions
@@ -126,6 +127,18 @@ Please make sure that you follow the academic integrity policy and do not copy o
 - **Output**: Evaluated variable.
 
 
+# Questions
+
+![Database schema](https://mystery.knightlab.com/schema.png)
+
+
+## Description of Database 
+
+Northwestern University's Knight lab created a SQL murder mystery to help users sharpen their database skills by solving the crime that happened at SQL city. There are tables with different pieces of information - social media checkins, people, drivers licenses, crime scene reports, police interviews, and more. 
+
+
+## Use the following information to answer questions 1-4:
+
 ```{r}
 url <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/practice-activities/data/sql-murder-setup.R"
 if (!"purrr" %in% installed.packages()) install.packages("purrr")
@@ -135,34 +148,55 @@ source(url)
 ```
 
 
-![Database schema](https://mystery.knightlab.com/schema.png)
 
-[Provide description for SQL database]
+1. **Calculate the Average Salary of Silver Members**: Determine the mean salary for all individuals classified as silver membership holders.
+
+```{r}
+
+```
 
 
-1. Find the average salary of silver members.
+2. **Visualize the Gym Duration for Gold and Regular Members by Month**: Create a plot that compares the average duration of gym visits for gold and regular members across the months of January, February, and March across all years.
 
-2. Plot the average time gold and regular members stay in gym for January, February, and March.
+```{r}
 
-3. Of the individuals that had  mentioned either "SQL Symphony Concert" or "Dealing with failure is easy:", what is their average Salary. (Hint, Make sure the individuals are unique)
+```
 
-4. Who is this person? Their person id is "80571". What is their Name, salary and address? Plot how often do they go to the gym. Plot how much time the spend in the gym per week.
+3. **Average Salary for Unique Attendees of Specific Events**: Calculate the average salary for unique individuals who have attended either the "SQL Symphony Concert" or the event titled "Dealing with Failure is Easy." Ensure that each individual is counted only once in the calculation.
+
+```{r}
+
+```
+
+
+4. **Profile and Gym Habits of a Specific Individual**:
+   - **Identification and Basic Information**: Identify the individual with a person ID of "80571" and retrieve their name, salary, and address.
+   - **Gym Attendance Visualization**: Plot the frequency of their gym visits over a specified period.
+   - **Weekly Gym Time Visualization**: Illustrate the amount of time they spend at the gym each week through a graphical representation.
+   
+```{r}
+
+```
 
 -----------------------
 
 Get experimental data from: 
 
 ```{r}
-url <-  url_base <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterm-exam/data/experimental_data.csv"
+url <-  url_base <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterms/data/experimental_data.csv"
 experimental_data_df <- read.csv(url)
 ```
 
-5. Pivot this experimental data wider. Then find the average height for time point. 
 
 
-6. Make a variable out of the rownames in mtcars select only mpg and hp. Pivot longer and find the average
+5. **Transform Experimental Data and Analyze Average Height by Time Point**
+   - Convert the provided experimental data to a wider format, then calculate the average height for each time point. 
+   - Ensure that the data structure is appropriately adjusted to facilitate this analysis.
 
-
+6. **Extracting Vehicle Names, Pivoting Data, and Analyzing Averages**
+   - First, extract the vehicle names from the `mtcars` dataset as a separate variable. (*Hint: there is a function that does this*) Next, select only the `mpg` (miles per gallon) and `hp` (horsepower) columns for further analysis. 
+   - Convert this selected data into a longer format, where each row represents a single measurement type (either `mpg` or `hp`) for each vehicle. Finally, calculate the average value of `mpg` and `hp` across all vehicles. 
+   - This task demonstrates how to reshape data for specific analytical needs and emphasizes the utility of pivoting for comparative analyses.
 
 -----------------------
 
@@ -178,32 +212,28 @@ The calculate_weighted_average function in R, as shown, implements this concept 
 **Below is a function intended to calculate the weighted average of a vector, but it contains an error and lacks consideration for a specific edge case. The function takes two arguments: values, a numeric vector of values, and weights, a numeric vector of weights corresponding to those values. Identify and correct the mistake, and modify the function to handle the case where all weights are zero, which should return NA since a weighted average cannot be calculated.**
 ```{r}
 calculate_weighted_average <- function(values, weights) {
-  if (length(values) != length(weights)) {
-    stop("values and weights must be of the same length")
-  }
+
   
-  if (all(weights == 0)) {
-    return(NA)  # Return NA if all weights are zero
-  }
+  weighted_sum <- max(values * weights, na.rm = TRUE)
+  total_weight <- mean(weights, na.rm = TRUE)
   
-  weighted_sum <- sum(values * weights, na.rm = TRUE)
-  total_weight <- sum(weights, na.rm = TRUE)
-  
-  if (total_weight == 0) {
-    return(NA)  # Avoid division by zero by returning NA
-  } else {
-    avg <- weighted_sum / total_weight
-    return(avg)
-  }
+  return(total_weight)
 }
 
-# Example usage:
+# Example 1 usage:
 values <- c(1, 2, 3, NA)
-weights <- c(0, 0, 0, 0)  # Edge case where all weights are zero
+weights <- c(0, 0, 0, 0)  
 calculate_weighted_average(values, weights)
+
+# Example 2 usage:
+values <- c(1, 2, 3, NA)
+weights <- c(0.1, 0.4, 0.3, 0.1, 0.1)  
+calculate_weighted_average(values, weights)
+
+
 ```
 
-9. Explain what the following function does. Specifically, describe the roles of {{}} and := within the function.
+9. Explain what the following function does. Specifically, describe the roles of {{}}, !! and  := within the function.
 
 ```{r}
 dynamic_filter_rename <- function(data, filter_var, new_name, threshold) {
@@ -215,4 +245,7 @@ dynamic_filter_rename <- function(data, filter_var, new_name, threshold) {
 ```
 
 
-10.  Create a function named `apply_percentile_rank` that takes a dataframe and a vector of column names, then calculates the percentile rank for the values in those columns. The percentile rank of a value is the percentage of observations in the dataset that are less than or equal to that value.
+10.  Create a function named `apply_percentile_rank` that takes a data frame and a vector of column names, then calculates the percentile rank for the values in those columns. The percentile rank of a value is the percentage of observations in the data set that are less than or equal to that value.
+
+
+<span style="color:green">**You GOT THIS!!!!!**</span>
