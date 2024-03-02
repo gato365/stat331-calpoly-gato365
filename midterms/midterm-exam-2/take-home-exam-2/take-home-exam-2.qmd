@@ -33,9 +33,9 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 ### Get Data for Questions 1-2
 ```{r}
 
-url <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterms/midterm-exam-2/take-home-exam-2/gather-imdb-movies.R"
-if (!"purrr" %in% installed.packages()) install.packages("purrr")
-source(url)
+# url <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterms/midterm-exam-2/take-home-exam-2/gather-imdb-movies.R"
+# if (!"purrr" %in% installed.packages()) install.packages("purrr")
+# source(url)
 
 ```
 
@@ -88,6 +88,6 @@ Use `ChatGPT` to create 2-3 sample data frames with different types of variables
 
 
 
-### 5. 
+### 5. How did you arrive at your answers?
 
 Describe how you used `ChatGPT`, friends, and other resources to complete this exam. If you do not explain this clearly, you will lose marks on your exam 2 score. List who you worked with.
