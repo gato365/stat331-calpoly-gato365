@@ -100,9 +100,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Certainly, here’s a more detailed version of the rules for the take-home exam:</p>
 <ol type="1">
 <li><p><strong>Collaboration</strong>: You are allowed to collaborate with your assigned group members. This includes discussing the exam questions, sharing ideas, and working together to find solutions. However, you should ensure that all final answers are your own work and not simply copied from others. <strong>Again, Make sure your code does not look like your peers.</strong> List who you worked with.</p></li>
-<li><p><strong>Use of ChatGPT</strong>: You are permitted to use ChatGPT as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that ChatGPT is a tool and not a substitute for your own understanding and analysis.</p></li>
+<li><p><strong>Use of <code>ChatGPT</code></strong>: You are permitted to use <code>ChatGPT</code> as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that <code>ChatGPT</code> is a tool and not a substitute for your own understanding and analysis.</p></li>
 <li><p><strong>No External Communication</strong>: You are not allowed to communicate with anyone outside of this class about the exam. This includes classmates not in your assigned group, tutors, friends, family, online forums, etc. The goal of this rule is to ensure that your work is your own and not influenced by external sources.</p></li>
-<li><p><strong>Reporting Communication</strong>: If you do have any conversations related to the exam (within your group or with ChatGPT), you should report this to the instructor. Include who you spoke with and a brief section at the bottom of the markdown file regarding your collaboration efforts.</p></li>
+<li><p><strong>Reporting Communication</strong>: If you do have any conversations related to the exam (within your group or with <code>ChatGPT</code>), you should report this to the instructor. Include who you spoke with and a brief section at the bottom of the markdown file regarding your collaboration efforts.</p></li>
 </ol>
 <p><strong>5. Please note that the midterm assignment is expected to be submitted in HTML format by 10 am on the upcoming Tuesday morning.</strong></p>
 </section>
@@ -110,79 +110,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="data-for-questions-1-2">Data for Questions 1-2</h2>
 <section id="get-data-for-questions-1-2" class="level3">
 <h3 class="anchored" data-anchor-id="get-data-for-questions-1-2">Get Data for Questions 1-2</h3>
-<p>Run the following code to gain access to the tables for questions 1-2.Uncomment the code and run it.</p>
+<p>Run the following code to gain access to the tables for questions 1-2. Uncomment the code and run it.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterms/midterm-exam-2/take-home-exam-2/gather-imdb-movies.R"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="st">"purrr"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) <span class="fu">install.packages</span>(<span class="st">"purrr"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1907 Columns: 5
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (3): first_name, last_name, gender
-dbl (2): id, film_count
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 34 Columns: 3
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (2): first_name, last_name
-dbl (1): id
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 285 Columns: 3
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): genre
-dbl (2): director_id, prob
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 36 Columns: 4
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): name
-dbl (3): id, year, rank
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 41 Columns: 2
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-dbl (2): director_id, movie_id
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 103 Columns: 2
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): genre
-dbl (1): movie_id
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 1989 Columns: 3
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): role
-dbl (2): actor_id, movie_id
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># url &lt;- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterms/midterm-exam-2/take-home-exam-2/gather-imdb-movies.R"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># if (!"purrr" %in% installed.packages()) install.packages("purrr")</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># source(url)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="schema-for-questions-1-2" class="level3">
 <h3 class="anchored" data-anchor-id="schema-for-questions-1-2">Schema for Questions 1-2</h3>
-<p><img src="images/schema_movie_db_image.png" class="img-fluid" data-fig-align="center"> <img src="https://github.com/gato365/stat331-calpoly-gato365/blob/master/midterms/midterm-exam-2/take-home-exam-2/images/schema_movie_db_image.png" class="img-fluid" data-fig-align="center"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/schema_movie_db_image.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<section id="joins-and-binds-i" class="level3">
-<h3 class="anchored" data-anchor-id="joins-and-binds-i">1. Joins and Binds I</h3>
+<section id="joins-i" class="level3">
+<h3 class="anchored" data-anchor-id="joins-i">1. Joins I</h3>
 <p>We are interested in exploring the IMDb database, which contains information about actors, roles, and movies.</p>
 <section id="part-a.-join-the-actors-roles-and-movies-tables-from-the-imdb-database-into-a-single-data-frame." class="level4">
 <h4 class="anchored" data-anchor-id="part-a.-join-the-actors-roles-and-movies-tables-from-the-imdb-database-into-a-single-data-frame.">Part a. Join the actors, roles, and movies tables from the IMDb database into a single data frame.</h4>
@@ -194,8 +141,8 @@ dbl (2): actor_id, movie_id
 <h4 class="anchored" data-anchor-id="part-c.-write-a-paragraph-that-summarizes-and-interprets-the-plot-from-part-b.-discuss-any-trends-patterns-or-anything-dramatic-that-you-observe.">Part c.&nbsp;Write a paragraph that summarizes and interprets the plot from part b. Discuss any trends, patterns, or anything dramatic that you observe.</h4>
 </section>
 </section>
-<section id="joins-and-binds-ii" class="level3">
-<h3 class="anchored" data-anchor-id="joins-and-binds-ii">2. Joins and Binds II</h3>
+<section id="joins-ii" class="level3">
+<h3 class="anchored" data-anchor-id="joins-ii">2. Joins II</h3>
 <p>We are interested in exploring the IMDb database even more, which contains information about movie_genre and movies.</p>
 <section id="part-a.-join-the-movie_genre-and-movies-tables-from-the-imdb-database-into-a-single-data-frame." class="level4">
 <h4 class="anchored" data-anchor-id="part-a.-join-the-movie_genre-and-movies-tables-from-the-imdb-database-into-a-single-data-frame.">Part a. Join the movie_genre and movies tables from the IMDb database into a single data frame.</h4>

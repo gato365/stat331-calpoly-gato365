@@ -12,11 +12,11 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 
 1.  **Collaboration**: You are allowed to collaborate with your assigned group members. This includes discussing the exam questions, sharing ideas, and working together to find solutions. However, you should ensure that all final answers are your own work and not simply copied from others. **Again, Make sure your code does not look like your peers.** List who you worked with.
 
-2.  **Use of ChatGPT**: You are permitted to use ChatGPT as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that ChatGPT is a tool and not a substitute for your own understanding and analysis.
+2.  **Use of `ChatGPT`**: You are permitted to use `ChatGPT` as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that `ChatGPT` is a tool and not a substitute for your own understanding and analysis.
 
 3.  **No External Communication**: You are not allowed to communicate with anyone outside of this class about the exam. This includes classmates not in your assigned group, tutors, friends, family, online forums, etc. The goal of this rule is to ensure that your work is your own and not influenced by external sources.
 
-4.  **Reporting Communication**: If you do have any conversations related to the exam (within your group or with ChatGPT), you should report this to the instructor. Include who you spoke with and a brief section at the bottom of the markdown file regarding your collaboration efforts.
+4.  **Reporting Communication**: If you do have any conversations related to the exam (within your group or with `ChatGPT`), you should report this to the instructor. Include who you spoke with and a brief section at the bottom of the markdown file regarding your collaboration efforts.
 
 **5. Please note that the midterm assignment is expected to be submitted in HTML format by 10 am on the upcoming Tuesday morning.**
 
@@ -25,7 +25,7 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 ### Get Data for Questions 1-2
 
 
-Run the following code to gain access to the tables for questions 1-2.Uncomment the code and run it. 
+Run the following code to gain access to the tables for questions 1-2. Uncomment the code and run it. 
 ```{r}
 
 
@@ -38,11 +38,14 @@ Run the following code to gain access to the tables for questions 1-2.Uncomment 
 ### Schema for Questions 1-2
 
 ![](images/schema_movie_db_image.png){fig-align="center"}
-![](https://github.com/gato365/stat331-calpoly-gato365/blob/master/midterms/midterm-exam-2/take-home-exam-2/images/schema_movie_db_image.png){fig-align="center"}
+
+
+
+
 
 ## Questions
 
-### 1. Joins and Binds I
+### 1. Joins I
 
 We are interested in exploring the IMDb database, which contains information about actors, roles, and movies.
 
@@ -52,7 +55,7 @@ We are interested in exploring the IMDb database, which contains information abo
 
 #### Part c. Write a paragraph that summarizes and interprets the plot from part b. Discuss any trends, patterns, or anything dramatic that you observe.
 
-### 2. Joins and Binds II
+### 2. Joins II
 
 We are interested in exploring the IMDb database even more, which contains information about movie_genre and movies.
 
