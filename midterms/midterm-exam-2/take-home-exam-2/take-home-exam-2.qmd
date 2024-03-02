@@ -6,9 +6,11 @@ editor: visual
 
 ## Midterm Exam I Take Home Assignment Rules
 
-[Download starter .qmd file](take-home-exam-2.qmd)
+[Download starter .qmd file from Canvas](https://canvas.calpoly.edu/courses/118024/files/12922323?module_item_id=3472694)
 
-Certainly, here's a more detailed version of the rules for the take-home exam:
+If the above link does not work, go to Canvas and go to module 8 and scroll until you see the this file and download it.
+
+
 
 1.  **Collaboration**: You are allowed to collaborate with your assigned group members. This includes discussing the exam questions, sharing ideas, and working together to find solutions. However, you should ensure that all final answers are your own work and not simply copied from others. **Again, Make sure your code does not look like your peers.** List who you worked with.
 
