@@ -6,7 +6,7 @@ editor: visual
 
 ## Midterm Exam I Take Home Assignment Rules
 
-[Download starter .qmd file](take_home_exam_2.qmd)
+[Download starter .qmd file](take-home-exam-2.qmd)
 
 Certainly, here's a more detailed version of the rules for the take-home exam:
 
@@ -24,8 +24,8 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 
 ### Get Data for Questions 1-2
 
+Run the following code to gain access to the tables for questions 1-2. Uncomment the code and run it.
 
-Run the following code to gain access to the tables for questions 1-2. Uncomment the code and run it. 
 ```{r}
 
 
@@ -38,10 +38,6 @@ Run the following code to gain access to the tables for questions 1-2. Uncomment
 ### Schema for Questions 1-2
 
 ![](images/schema_movie_db_image.png){fig-align="center"}
-
-
-
-
 
 ## Questions
 
