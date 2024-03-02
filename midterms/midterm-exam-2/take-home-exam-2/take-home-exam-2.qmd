@@ -24,18 +24,21 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 
 ### Get Data for Questions 1-2
 
+
+Run the following code to gain access to the tables for questions 1-2.Uncomment the code and run it. 
 ```{r}
 
 
-url <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterms/midterm-exam-2/take-home-exam-2/gather-imdb-movies.R"
-if (!"purrr" %in% installed.packages()) install.packages("purrr")
-source(url)
+# url <- "https://raw.githubusercontent.com/gato365/stat331-calpoly-gato365/master/midterms/midterm-exam-2/take-home-exam-2/gather-imdb-movies.R"
+# if (!"purrr" %in% installed.packages()) install.packages("purrr")
+# source(url)
 
 ```
 
 ### Schema for Questions 1-2
 
-![](https://github.com/gato365/stat331-calpoly-gato365/blob/master/midterms/midterm-exam-2/take-home-exam-2/schema_movie_db_image.png){fig-align="center"}
+![](images/schema_movie_db_image.png){fig-align="center"}
+![](https://github.com/gato365/stat331-calpoly-gato365/blob/master/midterms/midterm-exam-2/take-home-exam-2/images/schema_movie_db_image.png){fig-align="center"}
 
 ## Questions
 
@@ -45,7 +48,7 @@ We are interested in exploring the IMDb database, which contains information abo
 
 #### Part a. Join the actors, roles, and movies tables from the IMDb database into a single data frame.
 
-#### Part b. Use R to create a plot that shows the number of male and female actors who acted in each year, based on the data frame from part a. Include the text of each gender regarding each year in the plot.
+#### Part b. Use R to create a plot that shows the number of male and female actors who acted in each year, based on the data frame from part a. Include the text of each gender regarding each year in the plot. Pretend as if the amount of details in this plot is going to affect your salary. Be as very detailed with your plot.
 
 #### Part c. Write a paragraph that summarizes and interprets the plot from part b. Discuss any trends, patterns, or anything dramatic that you observe.
 
