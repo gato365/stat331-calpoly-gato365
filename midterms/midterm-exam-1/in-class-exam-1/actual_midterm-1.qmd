@@ -1,0 +1,368 @@
+---
+title: "Midterm-1-Plan"
+author: "Your Name"
+format: 
+  html:
+    self-contained: true
+    code-tools: true
+    toc: true
+editor: source
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
+---
+
+
+
+
+```{r setup}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+
+
+Show students
+```{r}
+str(penguins)
+```
+
+More information about `penguin` df
+Format
+A tibble with 344 rows and 8 variables:
+
+  - `species`: a factor denoting penguin species (Adélie, Chinstrap and Gentoo)
+  - `island`: a factor denoting island in Palmer Archipelago, Antarctica (Biscoe, Dream or Torgersen)
+  - `bill_length_mm`: a number denoting bill length (millimeters)
+  - `bill_depth_mm`: a number denoting bill depth (millimeters)
+  - `flipper_length_mm`: an integer denoting flipper length (millimeters)
+  - `body_mass_g`: an integer denoting body mass (grams)
+  - `sex`: a factor denoting penguin sex (female, male)
+  - `year`: an integer denoting the study year (2007, 2008, or 2009)
+
+--------------------------------------------------------------------
+Question Idea: 
+Notion: Show students code and ask them to select what is going to happen?
+
+
+  Version 1: Select which explanation best explains the following code snippet.
+    code:
+```{r}
+mod_1_penguins <- penguins %>% 
+  filter(species == "Adelie")  %>% 
+  select(bill_depth_mm, island)
+```
+
+1. The code subsets the `penguins` data frame to only include "Adelie" species and extracts the bill depth and island columns. [correct]
+2. The code extracts the bill depth and island columns then subsets the `penguins` data frame to only include "Adelie" species.
+3. The code subsets the `penguins` data frame to only include "Chinstrap" species and extracts the bill depth and body mass columns.
+4. The code subsets the `penguins` data frame to only include "Adelie" species and extracts the bill length and body mass columns.
+5. The code subsets the `penguins` data frame to only include "Gentoo" species and extracts the bill depth and body mass columns.
+
+
+
+
+    
+  
+  Version 2: Select which explanation best explains the following code snippet.
+    code: 
+    ```{r}
+mod_1_penguins <- penguins %>% 
+  filter(island == "Torgersen")  %>% 
+  filter(species == "Adelie")  
+```
+
+
+
+1. The code is creating a new data frame `mod_1_penguins` that contains all rows from the `penguins` data frame.
+2. The code is filtering the `penguins` data frame to include only the rows where the `island` is "Torgersen" and the `species` is "Adelie", and storing the result in `mod_1_penguins`. [Correct]
+3. The code is modifying the `penguins` data frame to change the `island` to "Torgersen" and the `species` to "Adelie" for all rows.
+4. The code is creating a new data frame `mod_1_penguins` that contains only the columns `island` and `species` from the `penguins` data frame.
+5. The code is filtering the `penguins` data frame to include only the rows where the `island` is "Torgersen" or the `species` is "Adelie", and storing the result in `mod_1_penguins`.
+
+
+
+
+
+  Version 3: Explain the following code snippet. Use as much detail you know to include regarding this code.
+    code:
+```{r}
+mod_1_penguins <- penguins %>% 
+  filter(island %in% c("Torgersen","Dream"))  %>% 
+  mutate(body_weight_lbs = body_mass_g/453.592)
+```
+  
+Format: Multiple Choice Or Open Ended
+Frequency: 2
+--------------------------------------------------------------------
+
+
+
+
+Question Idea: 
+Notion: Which of the following is a data storage type in R? Select all that apply.
+Format: Multiple Answer
+
+Options:
+1. tuples
+2. vectors [Correct]
+3. data frames [Correct]
+4. containers
+5. dictionaries
+
+
+Frequency: 1
+--------------------------------------------------------------------
+
+
+Question Idea: 
+Notion: Which code does the following? Select all that apply
+  Version 1: **Which of the following code snippets will find the mean `mean` and standard deviation `sd`of bill_depth_mm grouped by island? Select all that apply.**
+1.  [Correct]
+```{r}
+penguins %>%
+  select(species,bill_depth_mm) %>% 
+  group_by(species) %>%
+  summarise(mean = mean(bill_depth_mm, na.rm = TRUE), sd = sd(bill_depth_mm, na.rm = TRUE))
+```
+
+2. [Correct]
+```{r}
+penguins %>%
+  group_by(species) %>%
+  summarise(mean = mean(bill_depth_mm, na.rm = TRUE), sd = sd(bill_depth_mm, na.rm = TRUE))
+```
+
+3. 
+```{r}
+penguins %>%
+  group_by(species) %>%
+  mutate(mean = mean(bill_depth_mm), sd = sd(bill_depth_mm))
+```
+
+4. 
+```{r}
+penguins %>%
+  select(species,bill_depth_mm) %>% 
+  group_by(species) %>%
+  summarise(mean = mean(bill_length_mm, na.rm = TRUE), sd = sd(bill_length_mm, na.rm = TRUE))
+```
+
+5. 
+```{r}
+penguins %>%
+  select(species,bill_depth_mm) %>% 
+  summarise(mean = mean(bill_depth_mm, na.rm = TRUE), sd = sd(bill_depth_mm, na.rm = TRUE)) %>%
+  group_by(species) 
+```
+
+
+  
+  
+
+  
+  Version 2: **Which of the following code snippets will find the median, maximum, and minimum of `bill_depth_mm` grouped by `island`? Select all that apply.**
+
+
+1. [Correct]
+```{r}
+penguins %>%
+  select(bill_depth_mm,island) %>% 
+  group_by(island) %>%
+  summarise(median = median(bill_depth_mm, na.rm = TRUE), max = max(bill_depth_mm, na.rm = TRUE), min = min(bill_depth_mm, na.rm = TRUE))
+```
+
+2. [Correct]
+```{r}
+penguins %>%
+  mutate(is_heavy = if_else(body_mass_g >400, "heavy","light")) %>% 
+  group_by(island) %>%
+  summarise(median = median(bill_depth_mm, na.rm = TRUE), max = max(bill_depth_mm, na.rm = TRUE), min = min(bill_depth_mm, na.rm = TRUE))
+```
+
+
+3. 
+```{r}
+penguins %>%
+  summarise(median = mean(bill_depth_mm, na.rm = TRUE), max = max(bill_depth_mm, na.rm = TRUE), min = min(bill_depth_mm, na.rm = TRUE)) %>%
+  group_by(island) 
+  
+```
+
+4. 
+```{r}
+penguins %>%
+  group_by(island) %>%
+  summarise(median = median(bill_length_mm, na.rm = TRUE), max = sum(bill_length_mm, na.rm = TRUE), min = min(bill_length_mm, na.rm = TRUE))
+```
+
+5. 
+```{r}
+penguins %>%
+  group_by(island) %>%
+  summarise(median = median(bill_depth_mm), max = max(bill_depth_mm), min = sum(bill_depth_mm))
+```
+
+
+
+  
+Format: Multiple Answer
+Frequency: 2
+--------------------------------------------------------------------
+
+
+Notion: What is wrong with this code
+Format: Multiple Choice or Open-ended
+  Version 1: **What is wrong with the following code?**
+    code:
+```{r}
+mod_2_penguins <- penguins %>% 
+  filter(species == "Adelie")  %>% 
+  select(bill_depth_mm,island) %>% 
+  group_by(island) %>% 
+  summarise(mean = mean(bill_length_mm, na.rm = TRUE))
+```
+
+
+1. The `filter` function is used incorrectly. It should be used to filter rows, not to assign a value to a column.
+2. The `select` function is used incorrectly. It should be used to select columns, not to assign a value to a column.
+3. The `summarise` function is trying to calculate the mean of `bill_length_mm`, but this column is not available in the data frame after the `select` function is used. [correct]
+4. The `group_by` function is used incorrectly. It should be used to group the data frame by a variable, not to assign a value to a column.
+5. There is nothing wrong with the code.
+
+
+  Version 2: **What is wrong with the following code?**
+    code:
+```{r}
+mod_1_penguins <- penguins %>% 
+  filter(island %in% c("Torgersen","Dream"))  %>% 
+  mutate(body_weight_lbs = body_mass_g/453.592) %>% 
+  only_2008 = year == 2008
+```
+
+
+1. The `filter` function is used incorrectly. It should be used to filter rows, not to assign a value to a column.
+2. The `mutate` function is used incorrectly. It should be used to create or modify columns, not to assign a value to a column.
+3. The `only_2008 = year == 2008` operation is outside of the pipeline and is not doing anything. It should be inside a `mutate` function if the intention is to create a new column. [correct]
+4. The `filter(island %in% c("Torgersen","Dream"))` operation is incorrect because the `island` column does not exist in the `penguins` data frame.
+5. There is nothing wrong with the code.
+
+
+
+
+  Version 3: **Explain what is wrong with the following code.**
+    code: 
+```{r}
+mod_2_penguins <- penguins %>% 
+  filter(island != "Torgersen")  %>% 
+  filter(species == "Adelie")  %>% 
+  select(bill_depth_mm, island, year) %>% 
+  mutate(is_Tor = if_else(island == "Torgersen",True,False) ) %>% 
+  select(species, bill_depth_mm, island, year, is_Tor)
+```
+
+
+
+
+Frequency: 2
+
+--------------------------------------------------------------------
+
+
+Show a new function in ggplot and dplyr and ask what it does based on its usage
+Format: Multiple Choice or Open-ended
+Frequency: 2
+
+
+
+
+
+
+
+
+
+`sample_frac()`: Randomly selects a number of rows or a fraction of rows from the data frame.
+
+Consider the following code snippet:
+```{r}
+set.seed(123)
+sample_data <- mtcars %>% 
+  sample_frac(0.5)
+```
+In this snippet, what does the `sample_frac()` function do?
+
+1. It selects all rows from the `mtcars` data frame.
+2. It selects 50% of the rows from the `mtcars` data frame at random. [correct]
+3. It selects the first 50% of the rows from the `mtcars` data frame.
+4. It selects the last 50% of the rows from the `mtcars` data frame.
+5. It selects 50 rows from the `mtcars` data frame at random.
+
+The correct answer is **2**: The `sample_frac()` function randomly selects a fraction of rows from the data frame. In this case, it's selecting 50% of the rows from the `mtcars` data frame at random. The `set.seed(123)` function is used to set the seed for the random number generator, which ensures that the same set of rows is selected every time the code is run.
+
+
+
+`transmute()`: Similar to mutate(), but drops existing variables not explicitly mentioned in the function call.
+
+Consider the following code snippet:
+```{r}
+transmuted_data <- mtcars %>% 
+  transmute(mpg_to_kpl = mpg * 0.425, cyl)
+```
+In this snippet, what does the `transmute()` function do?
+
+1. It creates a new column `mpg_to_kpl` in the `mtcars` data frame, without dropping any existing columns.
+2. It creates a new column `mpg_to_kpl` in the `mtcars` data frame, and drops all other columns not mentioned in the function call. [correct]
+3. It modifies the `mpg` column in the `mtcars` data frame to be equal to `mpg * 0.425`.
+4. It renames the `mpg` column in the `mtcars` data frame to `mpg_to_kpl`.
+5. It creates a new data frame with only the `mpg_to_kpl` and `cyl` columns.
+
+
+
+--------------------------------------------------------------------
+
+Notion: Understand Variable type is important
+Format: Multiple Choice or Open-ended
+
+**What is wrong with the following code?**
+```{r}
+ggplot(penguins, aes(x = flipper_length_mm)) +
+  geom_bar()
+```
+1. `geom_bar()` is used incorrectly. It should be used with a categorical variable, not a quantitative variable like `flipper_length_mm`.
+2. The `aes()` function is used incorrectly. It should be used to map variables to aesthetic attributes, not to assign a value to a variable.
+3. The `ggplot()` function is used incorrectly. It should be used to create a plot, not to assign a value to a variable.
+4. The `flipper_length_mm` variable does not exist in the `penguins` data frame.
+5. There is nothing wrong with the code.
+
+**What is wrong with the following code?**
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = species)) +
+  geom_point()
+```
+1. `geom_point()` is used incorrectly. It should be used with two quantitative variables, not with a categorical variable like `species`.
+2. The `aes()` function is used incorrectly. It should be used to map variables to aesthetic attributes, not to assign a value to a variable.
+3. The `ggplot()` function is used incorrectly. It should be used to create a plot, not to assign a value to a variable.
+4. The `bill_length_mm` or `species` variable does not exist in the `penguins` data frame.
+5. There is nothing wrong with the code.
+
+Frequency: 2
+
+
+
+
+
+Sure, here are five possible options for what could be wrong with each code:
+
+**For the bar plot:**
+1. `geom_bar()` is used incorrectly. It should be used with a categorical variable, not a quantitative variable like `flipper_length_mm`.
+2. The `aes()` function is used incorrectly. It should be used to map variables to aesthetic attributes, not to assign a value to a variable.
+3. The `ggplot()` function is used incorrectly. It should be used to create a plot, not to assign a value to a variable.
+4. The `flipper_length_mm` variable does not exist in the `penguins` data frame.
+5. There is nothing wrong with the code.
+
+The correct answer is **1**: `geom_bar()` is typically used with a categorical variable, not a quantitative variable like `flipper_length_mm`. If the intention is to create a histogram, `geom_histogram()` should be used instead.
+
+
+

@@ -6,7 +6,7 @@ editor: visual
 
 # Midterm Exam I Take Home Assignment
 
-[Download starter .qmd file](actual_midterm_take_home.qmd)
+[Download starter .qmd file](actual_midterm_take_home_1.qmd)
 
 ## Rules:
 

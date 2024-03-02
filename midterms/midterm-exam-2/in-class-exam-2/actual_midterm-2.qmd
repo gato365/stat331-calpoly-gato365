@@ -1,0 +1,312 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+```{r setup}
+
+library(tidyverse)
+
+nba_data <- readxl::read_xlsx(here::here("midterms","data", "nba_data.xlsx"))
+```
+
+```{r}
+game_one_season_one_wide_df <- nba_data %>% 
+  filter(Season == "season_1", G == "1") %>% 
+  select(Name, PTS, STL, MP)
+
+game_one_season_one_wide_df
+```
+
+```{r}
+
+
+game_one_season_one_long_df <- game_one_season_one_wide_df %>%
+  pivot_longer(cols = c(PTS, STL, MP),
+               names_to = "Statistic",
+               values_to = "Value")
+
+game_one_season_one_df_long
+
+```
+
+```{r}
+hp_mpg_wide_df <- mtcars %>% 
+  rownames_to_column("car_names") %>% 
+  select(car_names, mpg,hp)
+hp_mpg_wide_df 
+```
+
+```{r}
+hp_mpg_wide_df <- hp_mpg_wide_df %>%
+  pivot_longer(cols = c(mpg,hp),
+               names_to = "Feature",
+               values_to = "Value")
+```
+
+Q1-version1: Which data manipulation concept is demonstrated by the transformation from the data frame in image A to the data frame in image B?
+
+**Image A:** ![](midterm-2-images/wide-nba.png)
+
+**Image B:**![](midterm-2-images/long-nba.png)
+
+Choices:
+
+-   pivot_longer (correct)
+-   pivot_wider
+-   inner_join
+-   full_join
+-   filter
+
+Q1-version2: Which data manipulation concept is demonstrated by the transformation from the data frame in image A to the data frame in image B?
+
+Images do not show the entire data frame.
+
+**Image A:** ![](midterm-2-images/long-mtcars.png)
+
+**Image B:**![](midterm-2-images/wide-mtcars.png)
+
+Choices:
+
+-   pivot_longer\
+-   pivot_wider (correct)
+-   inner_join
+-   full_join
+-   filter
+
+Q2-version1: You have two data frames: `Students` and `Courses`.
+
+1.  `Students` data frame:
+    -   `StudentID`: Unique identifier for each student.
+    -   `Name`: Name of the student.
+    -   `Major`: Major field of study for the student.
+2.  `Courses` data frame:
+    -   `CourseID`: Unique identifier for each course.
+    -   `StudentID`: Identifier for the student who is enrolled in the course.
+    -   `CourseName`: Name of the course.
+    -   `Grade`: Grade received by the student in the course.
+
+Now, suppose we want to analyze the performance of students specifically in their major courses. Which join is most appropriate? Select all that apply.
+
+Choices:
+
+-   right_join
+-   left_join
+-   inner_join (correct)
+-   full_join
+-   anti_join
+
+Q2-version2: You have two data frames: `Students` and `Courses`.
+
+1.  `Students` data frame:
+    -   `StudentID`: Unique identifier for each student.
+    -   `Name`: Name of the student.
+    -   `Major`: Major field of study for the student.
+2.  `Courses` data frame:
+    -   `CourseID`: Unique identifier for each course.
+    -   `StudentID`: Identifier for the student who is enrolled in the course.
+    -   `CourseName`: Name of the course.
+    -   `Grade`: Grade received by the student in the course.
+
+Now, let’s consider a scenario where we want to find out all the students (regarding their names) and the courses they are enrolled in, if any. Which join is most appropriate? Select all that apply.
+
+Choices:
+
+-   right_join (correct)
+-   left_join (correct)
+-   inner_join
+-   full_join
+-   anti_join
+
+Q3: Let's consider two small data frames: `Employees` and `Departments`.
+
+```{r}
+Employees <- data.frame(
+  EmployeeID = c(1, 2, 3, 4, 5),
+  Name = c("Alice", "Bob", "Charlie", "David", "Eve"),
+  DepartmentID = c(1, 2, NA, 1, 2)
+)
+
+Departments <- data.frame(
+  DepartmentID = c(1, 2),
+  DepartmentName = c("HR", "Engineering")
+)
+
+
+result_df <- Employees %>%
+  left_join(Departments, by = "DepartmentID")
+
+result_df
+```
+
+Based on this left_join, how many rows will be in the resulting data frame? 5
+
+Q4: Let's consider two small data frames: `Employees` and `Departments`.
+
+```{r}
+Employees <- data.frame(
+  EmployeeID = c(1, 2, 3, 4, 5),
+  Name = c("Alice", "Bob", "Charlie", "David", "Eve"),
+  DepartmentID = c(1, 2, NA, 1, 2)
+)
+
+Departments <- data.frame(
+  DepartmentID = c(1, 2),
+  DepartmentName = c("HR", "Engineering")
+)
+
+
+result_df <- Employees %>%
+  inner_join(Departments, by = "DepartmentID")
+
+result_df
+```
+
+Based on this inner_join, how many rows will be in the resulting data frame? 4
+
+Q5: Given the following code snippet, which statement best describes the behavior of the `hms()` function when parsing the time string "26:85:00"?
+
+```{r}
+time <- hms("26:85:00")
+```
+
+Choices:
+
+-   The `hms()` function will return an error because "26:85:00" is outside the conventional range for hours and minutes.
+-   The `hms()` function will correctly parse "26:85:00" into a Period object, interpreting it as 26 hours and 85 minutes. (Correct)
+-   The `hms()` function will ignore the "26:85:00" input and return NA.
+-   The `hms()` function will convert "26:85:00" into seconds only.
+-   The `hms()` function will convert the data time into days.
+
+Q6: Which of the following code snippets correctly use the `ymd()` function to parse a date string into a Date object? Select all that apply.
+
+Choices:
+
+-   date <- ymd("2023, 04, 15")
+-   date <- ymd("20230415") (correct)
+-   date <- ymd("April 15, 2023")
+-   date <- ymd("15-04-1988")
+-   date <- ymd("2024-04-08") (correct)
+
+Q7: Consider the following R code snippet that uses the lubridate package for date arithmetic:
+
+```{r}
+date1 <- ymd("20230228")
+date2 <- date1 %m+% months(1)
+date3 <- date2 - days(1)
+
+date3
+```
+
+Use your reasoning skills to deduce what `date3` should be? Explain your reasoning
+
+### Question 1: Replacing Text in Strings
+
+Given the following vector of text strings, select the correct function to replace all occurrences of "data" with "information".
+
+``` r
+text_vector <- c("Data analysis is key in data science.", "Big data techniques are evolving.")
+```
+
+Which function from the `stringr` package would you use?
+
+A)  `str_detect(text_vector, "data")`
+
+B)  `str_replace_all(text_vector, "data", "information")`
+
+C)  `str_extract(text_vector, "data")`
+
+D)  `str_split(text_vector, "data")`
+
+E)  `str_c(text_vector, "data")`
+
+-   Correct Answer: B
+
+### Question 2: Extracting Digits from Strings
+
+Consider the following string:
+
+``` r
+text_string <- "Order 123: Processing completed."
+```
+
+You need to extract the first occurrence of any digit. Which `stringr` function allows you to accomplish this?
+
+A)  `str_extract(text_string, "\\d+")`
+
+B)  `str_detect(text_string, "\\d+")`
+
+C)  `str_replace(text_string, "\\d+", "number")`
+
+D)  `str_count(text_string, "\\d+")`
+
+E)  `str_split(text_string, "\\d+")`
+
+-   Correct Answer: A
+
+### Question 3 (Multiple Answers): Detecting and Splitting Strings
+
+Given the log message below:
+
+``` r
+log_message <- "Error: System failure reported in module 3."
+```
+
+Which of the following `stringr` functions would you use to both detect the presence of the word "error" and split the log messages into a list of words? (Select two)
+
+A)  `str_detect(log_message, "error")`
+
+B)  `str_replace_all(log_message, "error", "warning")`
+
+C)  `str_split(log_message, " ")`
+
+D)  `str_extract(log_message, "error")`
+
+E)  `str_view(log_message, "error")`
+
+-   Correct Answers: A, C
+
+### Question 4: Concatenating Words with a Separator
+
+You have the following vector of words:
+
+``` r
+words_vector <- c("apple", "banana", "cherry")
+```
+
+Which `stringr` function would you use to concatenate them into a single string, with each word separated by a comma?
+
+A)  `str_c(words_vector, collapse = ",")`
+
+B)  `str_join(words_vector, sep = ",")`
+
+C)  `str_combine(words_vector, ",")`
+
+D)  `str_paste(words_vector, sep = ",")`
+
+E)  `str_glue(words_vector, glue = ",")`
+
+-   Correct Answer: A
+
+### Question 5 (Multiple Answers): Standardizing Email Addresses
+
+Given a vector of email addresses:
+
+``` r
+emails <- c("ExampleEmail@DOMAIN.com ", " SampleEMAIL@example.com")
+```
+
+You want to (1) remove all whitespace and (2) convert all letters to lowercase for standardization. Which `stringr` functions would you use? (Select two)
+
+A)  `str_trim(emails)`
+
+B)  `str_to_lower(emails)`
+
+C)  `str_remove_all(emails, "\\s")`
+
+D)  `str_replace_all(emails, "\\s+", "")`
+
+E)  `str_detect(emails, "email")`
+
+-   Correct Answers: B, C
