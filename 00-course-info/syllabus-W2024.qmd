@@ -1,6 +1,6 @@
 ---
 title: "Stat 331/531: Statistical Computing with R"
-subtitle: "Winter 2024"
+subtitle: "Winter 20253"
 format: 
   html:
     self-contained: true

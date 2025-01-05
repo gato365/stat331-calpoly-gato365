@@ -1,0 +1,128 @@
+
+
+```{r}
+library(readr)
+library(tidyverse)
+avocado_updated_2020 <- read_csv("~/Important_Files/Cal_Poly/01_Class_Material/STAT_331/lab-assignments-key/lab4/avocado-updated-2020.csv")
+View(avocado_updated_2020)
+```
+
+
+Create 3 snippets of this code that has 3 verbs within dplyr
+
+1. use forcats in some way
+2. use lubridate in some way
+3. use stringr in some way
+
+
+```{r}
+library(dplyr)
+library(forcats)
+library(purrr)
+library(lubridate)
+```
+
+
+```{r}
+avocado_updated_2020 %>%
+  select(type, average_price, year) %>%
+  mutate(type = fct_recode(type, "Regular" = "conventional", "Expensive" = "organic")) %>%
+  arrange(type) %>%
+  ggplot(aes(x = type, y = average_price)) +
+  geom_boxplot() +
+  facet_grid(. ~ year) +
+  labs(title = "Average Price of Avocados by Type and Year",
+       x = "Type of Avocado",
+       y = "Average Price (USD)",
+       caption = "Data Source: Avocado Prices 2020") +
+  theme_minimal() +
+  theme(text = element_text(size = 12),
+        plot.title = element_text(face = "bold", hjust = 0.5),
+        axis.title = element_text(face = "bold"))
+```
+
+
+
+```{r}
+avocado_updated_2020 %>%
+  select(date, average_price,total_volume) %>%
+  mutate(
+    date = as.Date(date),
+    month = month(date,label = TRUE) )%>%
+  group_by(month) %>%
+  summarise(avg_price_by_month = mean(average_price, na.rm = TRUE),
+            avg_total_volume_by_month = mean(total_volume, na.rm = TRUE)) %>% 
+  ggplot(aes(x = avg_total_volume_by_month,  y= avg_price_by_month, color = month)) +
+  geom_point() +
+  scale_color_brewer(palette = "Set2") +
+  labs(
+    title = "Average Price by Month vs Average Total Volume by Month",
+    x = "Average Total Volume by Month",
+    y = "Average Price by Month",
+    color = "Month"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.title.x = element_text(face = "bold"),
+    axis.title.y = element_text(face = "bold")
+  )
+```
+
+
+
+
+
+```{r}
+
+west_coast <- c("California", "Los Angeles", "San Diego", 
+                     "San Francisco", "Sacramento", "Seattle",
+                     "Portland", "West")
+california <- "California|Los Angeles|San Diego|San Francisco|Sacramento"
+
+avocado_updated_2020 %>%
+  select(geography, average_price,total_volume) %>%
+  mutate(coast = case_when(
+    geography %in%  west_coast ~ "West Coast",
+    TRUE ~ "Not West Coast"
+  ),
+  is_california = ifelse(str_detect(geography,california),TRUE,FALSE)) %>% 
+  filter(str_detect(coast, "West Coast")) %>%
+  ggplot(aes(x = average_price, y = total_volume, color = is_california)) + 
+  geom_point() +
+  scale_color_manual(values = c("TRUE" = "blue", "FALSE" = "red")) +
+  labs(
+    title = "Average Price vs Total Volume for Avocados on the West Coast",
+    x = "Average Price",
+    y = "Total Volume",
+    color = "Is California"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.title.x = element_text(face = "bold"),
+    axis.title.y = element_text(face = "bold")
+  )
+```
+
+
+
+
+```{r}
+# Define a function to calculate mean and standard deviation
+calc_stats <- function(df, var) {
+  list(
+    mean = mean(df[[var]], na.rm = TRUE),
+    sd = sd(df[[var]], na.rm = TRUE)
+  )
+}
+
+
+avocado_updated_2020 %>%
+  select(type, average_price, total_volume) %>%
+  split(.$type) %>%
+  map2_df(c("average_price", "total_volume"), ~ calc_stats(.x, .y))
+```
+
+
+use a function in some way using rlang more specifically uses walrus and embrace
