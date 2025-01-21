@@ -8,7 +8,7 @@ editor: visual
 
 [Download starter .qmd file](actual_midterm_take_home_1.qmd)
 
-[Download Survey.csv file for analysis](surveys.csv)
+[Download surveys.csv file for analysis](surveys.csv)
 
 ## Rules:
 
@@ -16,7 +16,9 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 
 1.  **Collaboration**: You are allowed to collaborate with your assigned group members. This includes discussing the exam questions, sharing ideas, and working together to find solutions. However, you should ensure that all final answers are your own work and not simply copied from others.
 
-2.  **Use of ChatGPT**: You are permitted to use ChatGPT as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that ChatGPT is a tool and not a substitute for your own understanding and analysis.
+Provide Names of your Groups:
+
+2.  **Use of ChatGPT**: You are permitted to use ChatGPT as a resource during the exam. This can be helpful for clarifying concepts, generating ideas, or checking your work. However, remember that ChatGPT is a tool and not a substitute for your own understanding and analysis. Be very explicit. 
 
 3.  **No External Communication**: You are not allowed to communicate with anyone outside of this class about the exam. This includes classmates not in your assigned group, tutors, friends, family, online forums, etc. The goal of this rule is to ensure that your work is your own and not influenced by external sources.
 
@@ -24,7 +26,7 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 
 **5. Please note that the midterm assignment is expected to be submitted in HTML format by 7 am on the upcoming Monday morning.**
 
-**Use the survey.csv data frame from week 3.**
+**Click on download survey csv to gain access to file.** Store it in the `Data` directory and use the `here` functionality to bring the data into R.
 
 ## Data Context
 
