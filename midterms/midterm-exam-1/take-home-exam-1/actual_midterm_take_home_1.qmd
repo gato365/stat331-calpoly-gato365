@@ -22,7 +22,7 @@ Certainly, here's a more detailed version of the rules for the take-home exam:
 
 **5. Please note that the midterm assignment is expected to be submitted in HTML format by 7 am on the upcoming Monday morning.**
 
-**Use the survey.csv data frame from week 2 lab 2.**
+**Use the survey.csv data frame from week 3.**
 
 ## Data Context
 
