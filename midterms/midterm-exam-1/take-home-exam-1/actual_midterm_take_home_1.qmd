@@ -48,7 +48,7 @@ We will be investigating the animal species diversity and weights found within p
 
 ## Q1: Recreate this plot with as much accuracy as possible. Pay attention to as much detail as possible.
 
-![](https://gato365.github.io/stat331-calpoly-gato365/midterms/recreate_image1.png)
+![](https://gato365.github.io/stat331-calpoly-gato365/midterms/midterm-exam-1/take-home-exam-1/recreate_image1.png)
 
 ## Q2: Explain this visualization in Q1
 
