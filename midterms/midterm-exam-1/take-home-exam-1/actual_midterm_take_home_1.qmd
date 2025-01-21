@@ -8,6 +8,8 @@ editor: visual
 
 [Download starter .qmd file](actual_midterm_take_home_1.qmd)
 
+[Download Survey.csv file for analysis](surveys.csv)
+
 ## Rules:
 
 Certainly, here's a more detailed version of the rules for the take-home exam:
